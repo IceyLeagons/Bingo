@@ -106,16 +106,14 @@ public class GameUtils {
         return true;
     }
 
-    public static void allocateTeamLocations(Game game) {
-        int maxX = 512;
-        int maxZ = 512;
-
+    public static void allocateTeamLocations(Game game, int range) {
         Random random = new Random();
+
         game.getTeams().values().forEach(team -> {
-            Vector2 v2 = Vector2.random(maxX, maxZ);
+            Vector2 v2 = Vector2.random(range, range);
             Block block = game.getWorld().getHighestBlockAt(v2.x, v2.z);
             while (block.isLiquid()) {
-                v2 = Vector2.random(maxX, maxZ);
+                v2 = Vector2.random(range, range);
                 block = game.getWorld().getHighestBlockAt(v2.x, v2.z);
             }
             Location highest = block.getLocation();
