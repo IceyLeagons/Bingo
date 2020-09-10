@@ -16,6 +16,7 @@ import net.iceyleagons.bingo.texture.MaterialTexture;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -94,7 +95,7 @@ public class Game {
         setBoardMode(BoardMode.LINE);
         setGameTime(GameTime.NO_FIXED_TIME);
         this.teams = Team.allocateTeamsForGame(this);
-        GameUtils.allocateTeamLocations(this);
+        GameUtils.allocateTeamLocations(this, 512);
         setupVoting();
         getVote().setClosed(!allowVoting);
         games.put(id, this);
@@ -127,29 +128,30 @@ public class Game {
     @Getter
     @Setter
     private Vote vote;
+
     public void setupVoting() {
         vote = new Vote();
 
-        VoteMenu dayTime = new VoteMenu(Material.ORANGE_TERRACOTTA,"GameTime",Collections.singletonList("asd"));
-        dayTime.addVoteOption(Material.YELLOW_TERRACOTTA,"Day",Collections.singletonList("asd"),1,0);
-        dayTime.addVoteOption(Material.BLACK_TERRACOTTA,"Night",Collections.singletonList("asd"),2,1);
-        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA,"Sunset",Collections.singletonList("asd"),3,2);
-        dayTime.addVoteOption(Material.CLOCK,"NoFixed",Collections.singletonList("asd"),4,3);
+        VoteMenu dayTime = new VoteMenu(Material.ORANGE_TERRACOTTA, "GameTime", Collections.singletonList("asd"));
+        dayTime.addVoteOption(Material.YELLOW_TERRACOTTA, "Day", Collections.singletonList("asd"), 1, 0);
+        dayTime.addVoteOption(Material.BLACK_TERRACOTTA, "Night", Collections.singletonList("asd"), 2, 1);
+        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA, "Sunset", Collections.singletonList("asd"), 3, 2);
+        dayTime.addVoteOption(Material.CLOCK, "NoFixed", Collections.singletonList("asd"), 4, 3);
 
-        VoteMenu boardMode = new VoteMenu(Material.PAPER, "Board",Collections.singletonList("asd"));
-        boardMode.addVoteOption(Material.STONE_BRICK_SLAB,"Line",Collections.singletonList("asd"),1,0);
-        boardMode.addVoteOption(Material.STONE_BRICK_WALL,"Fullhouse",Collections.singletonList("asd"),2,1);
-        boardMode.addVoteOption(Material.WHEAT_SEEDS,"Spread",Collections.singletonList("asd"),3,2);
-        boardMode.addVoteOption(Material.STICK,"Diagonal",Collections.singletonList("asd"),4,3);
+        VoteMenu boardMode = new VoteMenu(Material.PAPER, "Board", Collections.singletonList("asd"));
+        boardMode.addVoteOption(Material.STONE_BRICK_SLAB, "Line", Collections.singletonList("asd"), 1, 0);
+        boardMode.addVoteOption(Material.STONE_BRICK_WALL, "Fullhouse", Collections.singletonList("asd"), 2, 1);
+        boardMode.addVoteOption(Material.WHEAT_SEEDS, "Spread", Collections.singletonList("asd"), 3, 2);
+        boardMode.addVoteOption(Material.STICK, "Diagonal", Collections.singletonList("asd"), 4, 3);
 
-        VoteMenu gameMode = new VoteMenu(Material.BOOK,"GameMode",Collections.singletonList("asd"));
-        gameMode.addVoteOption(Material.OAK_SAPLING,"Amateur",Collections.singletonList("asd"),1,0);
-        gameMode.addVoteOption(Material.STONE_SWORD,"Normal",Collections.singletonList("asd"),2,1);
-        gameMode.addVoteOption(Material.DIAMOND_SWORD,"Insanity",Collections.singletonList("asd"),3,2);
+        VoteMenu gameMode = new VoteMenu(Material.BOOK, "GameMode", Collections.singletonList("asd"));
+        gameMode.addVoteOption(Material.OAK_SAPLING, "Amateur", Collections.singletonList("asd"), 1, 0);
+        gameMode.addVoteOption(Material.STONE_SWORD, "Normal", Collections.singletonList("asd"), 2, 1);
+        gameMode.addVoteOption(Material.DIAMOND_SWORD, "Insanity", Collections.singletonList("asd"), 3, 2);
 
-        vote.addMenu(dayTime,0,1);
-        vote.addMenu(boardMode,1,2);
-        vote.addMenu(gameMode,2,3);
+        vote.addMenu(dayTime, 0, 1);
+        vote.addMenu(boardMode, 1, 2);
+        vote.addMenu(gameMode, 2, 3);
         vote.setClosed(false);
     }
 
@@ -176,6 +178,27 @@ public class Game {
         this.items = MaterialTexture.random(getGameMode().getFree(), getGameMode().getEasy(), getGameMode().getMedium(), getGameMode().getHard(), getGameMode().getExpert());
         setTime();
 
+        if (gameMode.isSmallerMap()) {
+            GameUtils.allocateTeamLocations(this, 256);
+            world.getWorldBorder().setSize(512);
+            teams.forEach((ignored, team) -> {
+                int amb = 0;
+                for (BingoPlayer player : team.getPlayers()) {
+                    amb++;
+                    if (player.getMountedOn() != null)
+                        player.getMountedOn().removeStacked(player);
+
+                    player.getPlayer().teleport(team.getSpawnLocation(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+
+                    new BukkitRunnable() {
+                        @Override
+                        public void run() {
+                            team.getLeader().stackPlayer(player);
+                        }
+                    }.runTaskLater(Main.main, amb * 5L);
+                }
+            });
+        }
         teams.values().forEach(team -> {
             team.getMapImage().update(this.items);
             team.getBingoRenderer().update();
@@ -184,7 +207,7 @@ public class Game {
 
     public void globalMessage(BingoPlayer player, String message) {
         Team team = player.getTeam();
-        String msg = String.format("§8[§cGlobal§8] %s%s§8: §f%s",team.getTeamColor(),player.getPlayer().getName(),message);
+        String msg = String.format("§8[§cGlobal§8] %s%s§8: §f%s", team.getTeamColor(), player.getPlayer().getName(), message);
         players.forEach(p -> {
             p.getPlayer().sendMessage(msg);
         });
@@ -208,7 +231,7 @@ public class Game {
     }
 
     public void declareWinner(Team team) {
-        String tname = team.isUsingIntegerNames() ? "#"+team.getTeamName() : team.getTeamName();
+        String tname = team.isUsingIntegerNames() ? "#" + team.getTeamName() : team.getTeamName();
         broadcast("&bThe team " + ChatColor.BOLD + team.getTeamColor() + tname + " &r&bhas won the game!", Optional.empty());
         Bukkit.getScheduler().runTaskLater(Main.main, this::endGame, 100L);
     }
@@ -227,7 +250,7 @@ public class Game {
 
         if (getGameMode().getResistanceTime() > 0)
             for (BingoPlayer player : getPlayers())
-                player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, getGameMode().getResistanceTime()  * 20, 0, true, false));
+                player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, getGameMode().getResistanceTime() * 20, 0, true, false));
 
         new BukkitRunnable() {
             @Override
