@@ -1,7 +1,7 @@
 package net.iceyleagons.bingo.listeners;
 
 import net.iceyleagons.bingo.Main;
-import net.iceyleagons.bingo.PacketUtils;
+import net.iceyleagons.bingo.utils.PacketUtils;
 import net.iceyleagons.bingo.apis.GlowApiProvider;
 import net.iceyleagons.bingo.game.BingoPlayer;
 import net.iceyleagons.bingo.game.Game;

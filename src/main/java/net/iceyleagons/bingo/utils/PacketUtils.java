@@ -19,16 +19,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package net.iceyleagons.bingo;
+package net.iceyleagons.bingo.utils;
 
-import com.google.common.collect.Maps;
 import lombok.NonNull;
 import lombok.SneakyThrows;
-import net.iceyleagons.bingo.packet.NettyHandler;
 import net.md_5.bungee.api.chat.TranslatableComponent;
-import org.apache.commons.lang.reflect.FieldUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

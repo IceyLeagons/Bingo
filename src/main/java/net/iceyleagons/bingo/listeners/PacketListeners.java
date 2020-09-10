@@ -1,11 +1,8 @@
 package net.iceyleagons.bingo.listeners;
 
-import net.iceyleagons.bingo.PacketUtils;
 import net.iceyleagons.bingo.packet.PacketHandler;
 import net.iceyleagons.bingo.packet.PacketListener;
 import net.iceyleagons.bingo.packet.PacketReceiveEvent;
-import net.iceyleagons.bingo.packet.WrappedPacket;
-import org.bukkit.entity.Player;
 
 public class PacketListeners implements PacketListener {
 

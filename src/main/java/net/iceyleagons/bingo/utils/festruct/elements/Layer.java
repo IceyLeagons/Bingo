@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.frostedengineering.utils.festruct.elements;
+package net.iceyleagons.bingo.utils.festruct.elements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,8 @@ import java.util.List;
  * @author TOTHT
  * <p>
  * This class represents a layer of a structure, containing all the needed information
+ * Part of FEStruct system
+ * @version 1.0
  */
 public class Layer {
 

@@ -85,6 +85,9 @@ public class BingoPlayer {
     @Setter
     @Getter
     private float saturation = 20;
+    @Getter
+    @Setter
+    private Integer freezedPlayerId;
 
     public BingoPlayer(Player player) {
         this.player = player;

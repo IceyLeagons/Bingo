@@ -1,10 +1,8 @@
-package net.iceyleagons.bingo.storage;
+package net.iceyleagons.bingo.storage.data;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Arrays;
 import java.util.UUID;
 
 /**
@@ -25,20 +23,16 @@ public class FreezedPlayer {
     private UUID uuid;
 
     @Column(name = "wins")
-    private int wins;
+    private int wins = 0;
 
     @Column(name = "losses")
-    private int losses;
+    private int losses = 0;
 
     @Column(name = "kills")
-    private int kills;
+    private int kills = 0;
 
     @Column(name = "checked_items")
-    private int checkedItems;
-
-    public static void asd() {
-        new FreezedPlayer();
-    }
+    private int checkedItems = 0;
 
 
     @Override

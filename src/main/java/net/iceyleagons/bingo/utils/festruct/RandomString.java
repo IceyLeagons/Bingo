@@ -15,11 +15,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.frostedengineering.utils;
+package net.iceyleagons.bingo.utils.festruct;
+
+
+import org.apache.commons.lang.RandomStringUtils;
 
 import java.util.Locale;
-
-import org.apache.commons.lang3.RandomStringUtils;
 
 public class RandomString {
 

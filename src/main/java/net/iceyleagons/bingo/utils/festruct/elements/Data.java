@@ -15,22 +15,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.frostedengineering.utils.festruct.elements;
+package net.iceyleagons.bingo.utils.festruct.elements;
+
+import org.bukkit.Bukkit;
+import org.bukkit.block.data.BlockData;
+import org.bukkit.entity.EntityType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.bukkit.Bukkit;
-import org.bukkit.block.data.BlockData;
-import org.bukkit.entity.EntityType;
-
 /**
  * @author TOTHT
  * <p>
  * <p>
  * This class contains all the information for a structure
+ * Part of FEStruct system
+ * @version 1.0
  */
 public class Data {
 

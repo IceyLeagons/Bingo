@@ -1,8 +1,8 @@
 package net.iceyleagons.bingo.game.voting;
 
 import lombok.Data;
-import net.iceyleagons.bingo.InventoryFactory;
-import net.iceyleagons.bingo.ItemFactory;
+import net.iceyleagons.bingo.utils.InventoryFactory;
+import net.iceyleagons.bingo.utils.ItemFactory;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;

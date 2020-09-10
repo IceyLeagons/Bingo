@@ -15,10 +15,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.bingo;
+package net.iceyleagons.bingo.utils;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
+import net.iceyleagons.bingo.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -37,12 +39,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InventoryFactory {
 
     private Inventory inv;
-    private HashMap<Inventory, InventoryFactory> inventories = new HashMap<Inventory, InventoryFactory>();
-    private HashMap<Integer, ClickRunnable> runs = new HashMap<Integer, ClickRunnable>();
+    private HashMap<Inventory, InventoryFactory> inventories = new HashMap<>();
+    private HashMap<Integer, ClickRunnable> runs = new HashMap<>();
     private int currentOpen = 0;
     private boolean registered = false;
     private Listener listener;
@@ -50,7 +53,8 @@ public class InventoryFactory {
     @Getter
     @Setter
     private List<Integer> denyList = new ArrayList<>();
-
+    @Getter
+    private Map<Player,InventoryFactory> playerInventories = new HashMap<>();
 
 
     public InventoryFactory(String name, int size) {
@@ -186,6 +190,7 @@ public class InventoryFactory {
         return listener;
     }
 
+    @SneakyThrows
     public void openInventory(Player player) {
         currentOpen++;
         register();

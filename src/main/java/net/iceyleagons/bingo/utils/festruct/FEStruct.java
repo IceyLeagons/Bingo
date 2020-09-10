@@ -15,15 +15,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.frostedengineering.utils.festruct;
+package net.iceyleagons.bingo.utils.festruct;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
-
+import net.iceyleagons.bingo.Main;
+import net.iceyleagons.bingo.utils.festruct.elements.Data;
+import net.iceyleagons.bingo.utils.festruct.elements.Layer;
+import net.iceyleagons.bingo.utils.festruct.elements.Loot;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -38,11 +35,20 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.scheduler.BukkitTask;
 
-import net.iceyleagons.frostedengineering.Main;
-import net.iceyleagons.frostedengineering.utils.festruct.elements.Data;
-import net.iceyleagons.frostedengineering.utils.festruct.elements.Layer;
-import net.iceyleagons.frostedengineering.utils.festruct.elements.Loot;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
 
+/**
+ * FEStruct file format parser/loader.
+ * Not an official library yet...
+ *
+ * @author TOTHTOMI
+ * @version 1.0
+ */
 public class FEStruct {
 
     private File f;
@@ -232,7 +238,7 @@ public class FEStruct {
         final Block[] fblocks = b;
         final BlockData[] fmats = mats;
 
-        task = Bukkit.getScheduler().runTaskTimer(Main.MAIN, new Runnable() {
+        task = Bukkit.getScheduler().runTaskTimer(Main.main, new Runnable() {
 
             @Override
             public void run() {

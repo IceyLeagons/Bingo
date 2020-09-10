@@ -15,19 +15,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.frostedengineering.utils.festruct;
+package net.iceyleagons.bingo.utils.festruct;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import net.iceyleagons.bingo.Main;
+import net.iceyleagons.bingo.utils.festruct.elements.Loot;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
@@ -35,11 +26,20 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import net.iceyleagons.frostedengineering.Main;
-import net.iceyleagons.frostedengineering.utils.Cuboid;
-import net.iceyleagons.frostedengineering.utils.RandomString;
-import net.iceyleagons.frostedengineering.utils.festruct.elements.Loot;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+/**
+ * FEStruct file format saver.
+ * Not an official library yet...
+ *
+ * @author TOTHTOMI
+ * @version 1.0
+ */
 public class FEStructSaver {
 
     private int numoflayers, numofblocksinlayer;
@@ -173,7 +173,7 @@ public class FEStructSaver {
             layer = new StringBuilder();
         }
 
-        File folder = new File(Main.MAIN.getDataFolder() + File.separator + "saved-structfiles");
+        File folder = new File(Main.main.getDataFolder() + File.separator + "saved-structfiles");
         if (!folder.exists())
             folder.mkdirs();
 

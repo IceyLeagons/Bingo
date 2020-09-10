@@ -13,6 +13,10 @@ import net.iceyleagons.bingo.listeners.BukkitListeners;
 import net.iceyleagons.bingo.listeners.PacketListeners;
 import net.iceyleagons.bingo.packet.NettyHandler;
 import net.iceyleagons.bingo.packet.PacketEventsHandler;
+import net.iceyleagons.bingo.storage.DatabaseParams;
+import net.iceyleagons.bingo.storage.DatabaseType;
+import net.iceyleagons.bingo.storage.HibernateManager;
+import net.iceyleagons.bingo.utils.PacketUtils;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -41,6 +45,15 @@ public class Main extends JavaPlugin implements CommandExecutor {
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
         bungeeMessenger = new BungeeMessenger(this);
+
+
+        DatabaseParams databaseParams = new DatabaseParams("asd","asd","asd");
+        HibernateManager.setDatabaseParams(databaseParams);
+        HibernateManager.setDatabaseType(DatabaseType.MYSQL);
+        HibernateManager.setEnabled(false); //Disabling Hibernate, so we don't throw an error because of the insufficient database params.
+
+        GameManager.loadPlayersFromDatabase();
+
        // setupCommands(commandManager);
         /*tinyProtocol = new TinyProtocol(this) {
             @Override
@@ -67,6 +80,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
     public void onDisable() {
         NettyHandler.ids.keySet().forEach(PacketUtils::uninjectPlayer);
         BingoPlayer.players.forEach(BingoPlayer::loadPlayerStats);
+        GameManager.savePlayersToDatabase();
         BingoPlayer.players.clear();
         WorldManager.cleanup();
     }

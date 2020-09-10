@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package net.iceyleagons.bingo;
+package net.iceyleagons.bingo.utils;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

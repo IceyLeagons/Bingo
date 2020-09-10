@@ -1,23 +1,19 @@
 package net.iceyleagons.bingo.game.voting;
 
 import lombok.Data;
-import net.iceyleagons.bingo.InventoryFactory;
-import net.iceyleagons.bingo.ItemFactory;
+import net.iceyleagons.bingo.utils.InventoryFactory;
+import net.iceyleagons.bingo.utils.ItemFactory;
 import net.iceyleagons.bingo.game.BingoPlayer;
 import net.iceyleagons.bingo.game.GameManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * @author TOTHTOMI
