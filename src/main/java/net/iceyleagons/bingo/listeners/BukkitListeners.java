@@ -9,10 +9,8 @@ import net.iceyleagons.bingo.game.GameManager;
 import net.iceyleagons.bingo.game.GameUtils;
 import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.teams.Team;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Material;
+import org.bukkit.*;
+import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Horse;
@@ -89,12 +87,16 @@ public class BukkitListeners implements Listener {
         if (!(itemEvent.getWhoClicked() instanceof Player)) return;
         Player player = (Player) itemEvent.getWhoClicked();
         if (itemEvent.getCurrentItem() != null)
-            if (GameManager.isInGame(player) && itemEvent.getCurrentItem().getType() == Material.MAP || itemEvent.getCurrentItem().getType() == Material.FILLED_MAP) {
-                itemEvent.setCurrentItem(new ItemStack(Material.AIR));
-                itemEvent.setCancelled(true);
+            if (GameManager.isInGame(player)) {
+                if (itemEvent.getCurrentItem().getType() == Material.MAP || itemEvent.getCurrentItem().getType() == Material.FILLED_MAP) {
+                    itemEvent.setCurrentItem(new ItemStack(Material.AIR));
+                    itemEvent.setCancelled(true);
+                }
+            } else {
+                Game game = GameManager.getBingoPlayer(player).getGame();
+                if (game.getGameState() == GameState.IN_GAME)
+                    callEvent(player, itemEvent.getCurrentItem());
             }
-
-        callEvent(player, itemEvent.getCurrentItem());
     }
 
     @EventHandler
@@ -103,10 +105,15 @@ public class BukkitListeners implements Listener {
         if (GameManager.isInGame(player)) {
             Game game = GameManager.getGame(player);
             if (event.getFrom().equals(game.getWorld())) {
+                int highestBlockNotCeiling = 127;
+                World nether = game.getNether();
+                Block at;
+                while ((at = nether.getBlockAt(0, highestBlockNotCeiling, 0)).getType() != Material.OBSIDIAN)
+                    highestBlockNotCeiling--;
 
-            } else if (event.getFrom().equals(game.getNether())) {
-
-            }
+                event.getPlayer().teleport(at.getLocation(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+            } else if (event.getFrom().equals(game.getNether()))
+                event.getPlayer().teleport(new Location(game.getWorld(), 0, game.getWorld().getHighestBlockYAt(0, 0), 0), PlayerTeleportEvent.TeleportCause.PLUGIN);
         }
     }
 

@@ -180,11 +180,14 @@ public class Game {
 
         if (gameMode.isSmallerMap()) {
             GameUtils.allocateTeamLocations(this, 256);
-            world.getWorldBorder().setSize(512);
+
+            final PotionEffect blindness = new PotionEffect(PotionEffectType.BLINDNESS, 100, 0, false, false);
             teams.forEach((ignored, team) -> {
                 int amb = 0;
                 for (BingoPlayer player : team.getPlayers()) {
+                    player.getPlayer().addPotionEffect(blindness);
                     amb++;
+
                     if (player.getMountedOn() != null)
                         player.getMountedOn().removeStacked(player);
 
@@ -198,7 +201,10 @@ public class Game {
                     }.runTaskLater(Main.main, amb * 5L);
                 }
             });
+
+            world.getWorldBorder().setSize(512);
         }
+
         teams.values().forEach(team -> {
             team.getMapImage().update(this.items);
             team.getBingoRenderer().update();
