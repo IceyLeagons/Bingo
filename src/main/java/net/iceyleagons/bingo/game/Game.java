@@ -248,7 +248,7 @@ public class Game {
                 if (getGameMode().isPvp())
                     pvp = true;
                 if (getGameMode().getShrinkSpeed() != 0)
-                    world.getWorldBorder().setSize(0, getGameMode().getShrinkSpeed() * 180L);
+                    world.getWorldBorder().setSize(0, getGameMode().getShrinkSpeed() * 300L);
             }
         }.runTaskLater(Main.main, getGameMode().getGracePeriod() * 20L);
     }
