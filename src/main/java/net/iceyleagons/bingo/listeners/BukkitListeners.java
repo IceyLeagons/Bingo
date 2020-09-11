@@ -71,13 +71,15 @@ public class BukkitListeners implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent chatEvent) {
         Player player = chatEvent.getPlayer();
         if (GameManager.isInGame(player)) {
+            chatEvent.setCancelled(true);
             BingoPlayer bingoPlayer = GameManager.getBingoPlayer(player);
+
             if (chatEvent.getMessage().startsWith("!")) {
-                bingoPlayer.getGame().globalMessage(bingoPlayer,chatEvent.getMessage());
+                bingoPlayer.getGame().globalMessage(bingoPlayer, chatEvent.getMessage().replaceFirst("!", ""));
                 return;
             }
-            bingoPlayer.getTeam().teamMessage(player,chatEvent.getMessage());
-            chatEvent.setCancelled(true);
+
+            bingoPlayer.getTeam().teamMessage(player, chatEvent.getMessage());
         }
     }
 
