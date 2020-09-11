@@ -94,8 +94,10 @@ public class BukkitListeners implements Listener {
                 }
             } else {
                 Game game = GameManager.getBingoPlayer(player).getGame();
-                if (game.getGameState() == GameState.IN_GAME)
-                    callEvent(player, itemEvent.getCurrentItem());
+                if (game != null)
+                    if (game.getGameState() != null)
+                        if (game.getGameState() == GameState.IN_GAME)
+                            callEvent(player, itemEvent.getCurrentItem());
             }
     }
 
