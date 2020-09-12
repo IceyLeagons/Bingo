@@ -17,6 +17,7 @@ import net.iceyleagons.bingo.storage.DatabaseParams;
 import net.iceyleagons.bingo.storage.DatabaseType;
 import net.iceyleagons.bingo.storage.HibernateManager;
 import net.iceyleagons.bingo.utils.PacketUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -53,6 +54,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
         HibernateManager.setEnabled(false); //Disabling Hibernate, so we don't throw an error because of the insufficient database params.
 
         GameManager.loadPlayersFromDatabase();
+
 
        // setupCommands(commandManager);
         /*tinyProtocol = new TinyProtocol(this) {
