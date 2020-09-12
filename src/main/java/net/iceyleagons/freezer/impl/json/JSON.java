@@ -28,7 +28,9 @@ public class JSON implements Freezer {
 
     public JSON(File subFolder,String name, int version) {
         this.name = name;
+        if (subFolder != null)
         this.file = new File(subFolder,name+".json");
+        else this.file = new File(name+".json");
         this.cache = new HashMap<>();
         typeOfHashMap = new TypeToken<Map<String, String>>() { }.getType();
         this.version = version;
@@ -107,9 +109,17 @@ public class JSON implements Freezer {
     }
 
     @Override
-    public void update() throws ExecutionException, InterruptedException {
+    public boolean update()  {
         updateLastUpdate();
-        if (push().get()) pull();
+        try {
+            if (push().get())
+                return pull().get();
+            else return false;
+
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override

@@ -48,8 +48,10 @@ public interface Freezer {
 
     /**
      * Updates the cache, firstly push all the data, that has changed and pull the complete data from the database.
+     *
+     * @return true if the update was successfull false otherwise
      */
-    void update() throws ExecutionException, InterruptedException;
+    boolean update();
 
     /**
      * Adds an {@link Object} to the cache
