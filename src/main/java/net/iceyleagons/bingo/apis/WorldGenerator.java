@@ -1,19 +1,18 @@
 package net.iceyleagons.bingo.apis;
 
-import net.iceyleagons.bingo.Main;
 import nl.rutgerkok.worldgeneratorapi.BiomeGenerator;
-import nl.rutgerkok.worldgeneratorapi.WorldGeneratorApi;
-import nl.rutgerkok.worldgeneratorapi.WorldRef;
-import org.bukkit.World;
-import org.bukkit.generator.ChunkGenerator;
+import nl.rutgerkok.worldgeneratorapi.event.WorldGeneratorInitEvent;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 
-public class WorldGenerator {
+public class WorldGenerator implements Listener {
 
-    public static ChunkGenerator createChunkGen(String world) {
-        return WorldGeneratorApi.getInstance(Main.main, 0, 5).createCustomGenerator(WorldRef.ofName(world), generator -> {
-            BiomeGenerator vanillaBiomeGenerator = generator.getBiomeGenerator();
-            generator.setBiomeGenerator((x, y, z) -> vanillaBiomeGenerator.getZoomedOutBiome(x * 16, y, z * 16));
-        });
+    @EventHandler
+    public void onInit(WorldGeneratorInitEvent event) {
+        if (event.getWorld().getName().toLowerCase().contains("game")) {
+            BiomeGenerator normalGenerator = event.getWorldGenerator().getBiomeGenerator();
+            event.getWorldGenerator().setBiomeGenerator((x, y, z) -> normalGenerator.getZoomedOutBiome(x * 16, y, z * 16));
+        }
     }
 
 }

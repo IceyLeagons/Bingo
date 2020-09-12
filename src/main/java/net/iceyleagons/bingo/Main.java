@@ -4,6 +4,7 @@ import me.tigerhix.lib.scoreboard.ScoreboardLib;
 import net.iceyleagons.bingo.apis.GlowApiProvider;
 import net.iceyleagons.bingo.apis.PartyProvider;
 import net.iceyleagons.bingo.apis.PlaceholderProvider;
+import net.iceyleagons.bingo.apis.WorldGenerator;
 import net.iceyleagons.bingo.bungee.BungeeMessenger;
 import net.iceyleagons.bingo.commands.CommandManager;
 import net.iceyleagons.bingo.commands.cmds.Join;
@@ -38,6 +39,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
     @Override
     public void onEnable() {
         main = this;
+        Bukkit.getPluginManager().registerEvents(new WorldGenerator(), this);
         eventsHandler = new PacketEventsHandler();
         eventsHandler.registerListener(new PacketListeners());
         CommandManager commandManager = new CommandManager(this, "Bingo", "bingo.node", "bingo", "b");

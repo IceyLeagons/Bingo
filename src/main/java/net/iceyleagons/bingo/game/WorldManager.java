@@ -38,8 +38,6 @@ public class WorldManager {
         worldCreator.environment(World.Environment.NORMAL);
         worldCreator.generateStructures(true);
         worldCreator.type(WorldType.NORMAL);
-        if (WorldGeneratorProvider.isPresent())
-            worldCreator.generator(WorldGeneratorProvider.getGenerator(worldName));
         World world = worldCreator.createWorld();
         assert world != null;
         world.getWorldBorder().setCenter(0, 0);

@@ -180,11 +180,14 @@ public class Game {
 
         if (gameMode.isSmallerMap()) {
             GameUtils.allocateTeamLocations(this, 256);
-            world.getWorldBorder().setSize(512);
+
+            final PotionEffect blindness = new PotionEffect(PotionEffectType.BLINDNESS, 100, 0, false, false);
             teams.forEach((ignored, team) -> {
                 int amb = 0;
                 for (BingoPlayer player : team.getPlayers()) {
+                    player.getPlayer().addPotionEffect(blindness);
                     amb++;
+
                     if (player.getMountedOn() != null)
                         player.getMountedOn().removeStacked(player);
 
@@ -198,7 +201,10 @@ public class Game {
                     }.runTaskLater(Main.main, amb * 5L);
                 }
             });
+
+            world.getWorldBorder().setSize(512);
         }
+
         teams.values().forEach(team -> {
             team.getMapImage().update(this.items);
             team.getBingoRenderer().update();
@@ -208,26 +214,16 @@ public class Game {
     public void globalMessage(BingoPlayer player, String message) {
         Team team = player.getTeam();
         String msg = String.format("§8[§cGlobal§8] %s%s§8: §f%s", team.getTeamColor(), player.getPlayer().getName(), message);
-        players.forEach(p -> {
-            p.getPlayer().sendMessage(msg);
-        });
+        players.forEach(p -> p.getPlayer().sendMessage(msg));
     }
 
     public void broadcast(String message, Optional<List<BingoPlayer>> ignore) {
         final String finalMessage = ChatColor.translateAlternateColorCodes('&', Main.prefix + message);
-        //List<BingoPlayer> ignored = null;
-        //if (ignore.isPresent())
-        //    ignored = ignore.get();
         List<BingoPlayer> ignored = ignore.orElse(Collections.emptyList());
 
-
-        players.forEach(p -> {
+        for (BingoPlayer p : players)
             if (!ignored.contains(p))
                 p.getPlayer().sendMessage(finalMessage);
-            ////  if (!finalIgnored.contains(p))
-            //}
-            // p.getPlayer().sendMessage(finalMessage);
-        });
     }
 
     public void declareWinner(Team team) {
@@ -242,7 +238,7 @@ public class Game {
     private void countdownOver() {
         if (getGameMode().isChangeHearts())
             for (BingoPlayer player : players)
-                Objects.requireNonNull(player.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue((int) Math.floor(getGameMode().getTotalNumOfHearts() / (players.size() + 1f)));
+                Objects.requireNonNull(player.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(Math.floor((float) (getGameMode().getTotalNumOfHearts() / players.size())));
 
         if (getGameMode().getAbsorptionTime() > 0)
             for (BingoPlayer player : getPlayers())
@@ -258,7 +254,7 @@ public class Game {
                 if (getGameMode().isPvp())
                     pvp = true;
                 if (getGameMode().getShrinkSpeed() != 0)
-                    world.getWorldBorder().setSize(0, getGameMode().getShrinkSpeed() * 180L);
+                    world.getWorldBorder().setSize(0, getGameMode().getShrinkSpeed() * 300L);
             }
         }.runTaskLater(Main.main, getGameMode().getGracePeriod() * 20L);
     }

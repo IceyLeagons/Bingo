@@ -1,22 +1,20 @@
 package net.iceyleagons.bingo.game;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import me.tigerhix.lib.scoreboard.type.Scoreboard;
-import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.game.teams.Team;
 import org.bukkit.Location;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.*;
 
 /**
  * @author TOTHTOMI
- *
+ * <p>
  * (because the server sucks we cannot use @Data)
  */
 
@@ -88,6 +86,9 @@ public class BingoPlayer {
     @Getter
     @Setter
     private Integer freezedPlayerId;
+    @Getter
+    @Setter
+    private double maxHealth = 20.0;
 
     public BingoPlayer(Player player) {
         this.player = player;
@@ -167,8 +168,9 @@ public class BingoPlayer {
         exhaustion = player.getExhaustion();
         foodLevel = player.getFoodLevel();
         health = player.getHealth();
-        if (player.getBedSpawnLocation()!=null)
-          spawnpoint = player.getBedSpawnLocation();
+        maxHealth = Objects.requireNonNull(player.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getBaseValue();
+        if (player.getBedSpawnLocation() != null)
+            spawnpoint = player.getBedSpawnLocation();
         saturation = player.getSaturation();
     }
 
@@ -182,12 +184,13 @@ public class BingoPlayer {
     }
 
     public void loadPlayerStats() {
+        Objects.requireNonNull(Objects.requireNonNull(player.getPlayer()).getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(maxHealth);
         player.getInventory().setArmorContents(armorContents);
         player.getInventory().setContents(inventoryContents);
         player.getInventory().setExtraContents(extraContents);
         player.getInventory().setStorageContents(storageContents);
-        if (spawnpoint!=null)
-          player.setBedSpawnLocation(spawnpoint, false);
+        if (spawnpoint != null)
+            player.setBedSpawnLocation(spawnpoint, false);
         player.setPlayerListName(playerListName);
         player.setExp(exp);
         player.setExhaustion(exhaustion);
