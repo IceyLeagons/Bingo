@@ -29,7 +29,7 @@ public class GameManager {
             int id = bingoPlayer.getFreezedPlayerId();
             FreezedPlayer toUpdate = FreezedPlayerManager.getFreezedPlayer(id);
             //TODO updating
-            FreezedPlayerManager.updateFreezedPlayer(id,toUpdate);
+            FreezedPlayerManager.updateFreezedPlayer(id, toUpdate);
         });
     }
 
@@ -38,7 +38,7 @@ public class GameManager {
         if (!players.isEmpty()) {
             players.forEach(freezedPlayer -> {
                 BingoPlayer bingoPlayer = FreezedPlayerManager.fromFreezedPlayer(freezedPlayer);
-                bingoPlayerMap.put(bingoPlayer.getPlayer(),bingoPlayer);
+                bingoPlayerMap.put(bingoPlayer.getPlayer(), bingoPlayer);
             });
         }
     }
@@ -73,11 +73,10 @@ public class GameManager {
             players.forEach(partyMember -> {
                 Player p = Bukkit.getPlayer(partyMember);
                 if (!player.equals(p)) {
-                    joinGame(p,game);
+                    joinGame(p, game);
                 }
             });
         }
-
 
         BingoPlayer bingoPlayer = getBingoPlayer(player);
         bingoPlayer.savePlayerStats();
@@ -87,7 +86,6 @@ public class GameManager {
     }
 
     public static void leaveGame(Player player) {
-
         BingoPlayer bingoPlayer = getBingoPlayer(player);
         if (player.isInsideVehicle()) player.leaveVehicle();
         setTeam(player, null);
