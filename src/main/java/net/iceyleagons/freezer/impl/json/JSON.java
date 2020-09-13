@@ -89,6 +89,11 @@ public class JSON implements Freezer {
     }
 
     @Override
+    public Long getLastUpdate(int id) {
+        return (Long) cache.get(id)[0];
+    }
+
+    @Override
     public CompletableFuture<Boolean> push() {
         updateLastUpdate();
         return CompletableFuture.supplyAsync(this::loadToFile);
