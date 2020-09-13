@@ -32,7 +32,7 @@ public class MapImage {
         this.matrixMap = matrixMap;
         textureMap = new HashMap<>();
         if (minecraftFont == null) {
-            minecraftFont = Font.createFont(Font.TRUETYPE_FONT, Main.main.getResource("mc.ttf"));
+            minecraftFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(Main.main.getResourceFile("mc.ttf")));
             minecraftFont = minecraftFont.deriveFont(16F);
         }
         File file = Main.main.getResourceFile("check.png");
