@@ -33,6 +33,12 @@ public interface Freezer {
     Long getLastUpdate();
 
     /**
+     * @param id the id of the object
+     * @return the time of the laste update for the object with that id in millis
+     */
+    Long getLastUpdate(int id);
+
+    /**
      * Pushes all the data in cache to the database
      *
      * @return A {@link CompletableFuture} with a boolean, if true the task was successful, if false it wasn't.
