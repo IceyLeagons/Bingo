@@ -17,7 +17,7 @@ public class ItemIcon {
 
     static {
         try {
-            atlas = ImageIO.read(Main.main.getResourceFile("items.png"));
+            atlas = ImageIO.read(Main.main.getResource("items.png"));
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
