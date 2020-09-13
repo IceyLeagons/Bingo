@@ -1,5 +1,6 @@
 package net.iceyleagons.bingo.map;
 
+import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.texture.MaterialTexture;
 
 import javax.imageio.ImageIO;
@@ -13,9 +14,10 @@ import java.io.IOException;
 public class ItemIcon {
 
     private static BufferedImage atlas = null;
+
     static {
         try {
-            atlas = ImageIO.read(new File("items.png"));
+            atlas = ImageIO.read(Main.main.getResourceFile("items.png"));
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
@@ -23,7 +25,7 @@ public class ItemIcon {
 
 
     public static BufferedImage getIcon(MaterialTexture materialTexture) throws IOException {
-        return atlas.getSubimage(materialTexture.getStartX(),materialTexture.getStartY(),16,16);
+        return atlas.getSubimage(materialTexture.getStartX(), materialTexture.getStartY(), 16, 16);
     }
 
 }

@@ -238,7 +238,7 @@ public class Game {
     private void countdownOver() {
         if (getGameMode().isChangeHearts())
             for (BingoPlayer player : players)
-                Objects.requireNonNull(player.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(Math.floor((float) (getGameMode().getTotalNumOfHearts() / players.size())));
+                Objects.requireNonNull(player.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(Math.floor((float) (getGameMode().getTotalNumOfHearts() / players.size())) * 2);
 
         if (getGameMode().getAbsorptionTime() > 0)
             for (BingoPlayer player : getPlayers())
