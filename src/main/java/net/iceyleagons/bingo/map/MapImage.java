@@ -32,11 +32,11 @@ public class MapImage {
         this.matrixMap = matrixMap;
         textureMap = new HashMap<>();
         if (minecraftFont == null) {
+            Main.main.saveResource("mc.ttf", false);
             minecraftFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(Main.main.getResourceFile("mc.ttf")));
             minecraftFont = minecraftFont.deriveFont(16F);
         }
-        File file = Main.main.getResourceFile("check.png");
-        if (checkMark == null) checkMark = resize(ImageIO.read(file), 16, 16);
+        if (checkMark == null) checkMark = resize(ImageIO.read(Main.main.getResource("check.png")), 16, 16);
         this.matrixSwapped = matrixMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
         init();
     }
