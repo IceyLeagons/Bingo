@@ -33,7 +33,7 @@ public class MapImage {
         textureMap = new HashMap<>();
         if (minecraftFont == null) {
             Main.main.saveResource("mc.ttf", false);
-            minecraftFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(Main.main.getResourceFile("mc.ttf")));
+            minecraftFont = Font.createFont(Font.TRUETYPE_FONT, Main.main.getResource("mc.ttf"));
             minecraftFont = minecraftFont.deriveFont(16F);
         }
         if (checkMark == null) checkMark = resize(ImageIO.read(Main.main.getResource("check.png")), 16, 16);
