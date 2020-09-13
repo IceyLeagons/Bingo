@@ -4,9 +4,6 @@ import lombok.NonNull;
 import net.iceyleagons.bingo.apis.PartyProvider;
 import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.teams.Team;
-import net.iceyleagons.bingo.storage.HibernateManager;
-import net.iceyleagons.bingo.storage.data.FreezedPlayer;
-import net.iceyleagons.bingo.storage.data.FreezedPlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -24,23 +21,9 @@ public class GameManager {
     private static Map<Player, BingoPlayer> bingoPlayerMap = new HashMap<>();
 
     public static void savePlayersToDatabase() {
-        if (!HibernateManager.isEnabled()) return;
-        bingoPlayerMap.values().forEach(bingoPlayer -> {
-            int id = bingoPlayer.getFreezedPlayerId();
-            FreezedPlayer toUpdate = FreezedPlayerManager.getFreezedPlayer(id);
-            //TODO updating
-            FreezedPlayerManager.updateFreezedPlayer(id, toUpdate);
-        });
     }
 
     public static void loadPlayersFromDatabase() {
-        List<FreezedPlayer> players = FreezedPlayerManager.loadPlayers();
-        if (!players.isEmpty()) {
-            players.forEach(freezedPlayer -> {
-                BingoPlayer bingoPlayer = FreezedPlayerManager.fromFreezedPlayer(freezedPlayer);
-                bingoPlayerMap.put(bingoPlayer.getPlayer(), bingoPlayer);
-            });
-        }
     }
 
     public static Game getGameById(@NonNull int id) {
@@ -98,7 +81,7 @@ public class GameManager {
     public static BingoPlayer getBingoPlayer(@NonNull Player player) {
         if (!bingoPlayerMap.containsKey(player)) {
             BingoPlayer bingoPlayer = new BingoPlayer(player);
-            Integer id = FreezedPlayerManager.generateFromBingoPlayer(bingoPlayer); //Saving player
+            Integer id = null; // = FreezedPlayerManager.generateFromBingoPlayer(bingoPlayer); //Saving player
             if (id != null) bingoPlayer.setFreezedPlayerId(id);
             bingoPlayerMap.put(player, bingoPlayer);
         }
