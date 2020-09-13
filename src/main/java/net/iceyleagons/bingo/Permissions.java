@@ -1,6 +1,7 @@
 package net.iceyleagons.bingo;
 
 import lombok.Getter;
+import net.iceyleagons.bingo.utils.SubPerms;
 import org.bukkit.entity.Player;
 
 import java.util.*;
@@ -11,18 +12,14 @@ import java.util.*;
 public enum Permissions {
 
     /*Collective permissions*/
-    USER("user", "collective", Optional.of(new Permissions[]{Permissions.GAME_JOIN, Permissions.GAME_LEAVE,
-            Permissions.VOTE_TIME_ALL, Permissions.VOTE_BOARDMODE_ALL, Permissions.VOTE_GAMEMODE_ALL})),
-    MODERATOR("moderator", "collective", Optional.of(new Permissions[]{Permissions.GAME_JOIN, Permissions.GAME_LEAVE,
-            Permissions.GAME_KICK,Permissions.VOTE_TIME_ALL, Permissions.VOTE_BOARDMODE_ALL, Permissions.VOTE_GAMEMODE_ALL})),
-    ADMIN("admin", "collective", Optional.of(new Permissions[]{Permissions.GAME_ALL,
-            Permissions.VOTE_TIME_ALL, Permissions.VOTE_BOARDMODE_ALL, Permissions.VOTE_GAMEMODE_ALL,Permissions.BINGO_RELOAD})),
+    USER("user", "collective", SubPerms.USER.getSubPerms()),
+    MODERATOR("moderator", "collective", SubPerms.MODERATOR.getSubPerms()),
+    ADMIN("admin", "collective", SubPerms.ADMIN.getSubPerms()),
 
     /*Singular permissions*/
     //Game Perms
     GAME_ALL("all", "game",
-            Optional.of(new Permissions[]{Permissions.GAME_CREATE, Permissions.GAME_FORCEJOIN, Permissions.GAME_KICK,
-                    Permissions.GAME_START, Permissions.GAME_STOP, Permissions.GAME_JOIN, Permissions.GAME_LEAVE})),
+           SubPerms.GAME_ALL.getSubPerms()),
     GAME_CREATE("create", "game", Optional.empty()),
     GAME_FORCEJOIN("forcejoin", "game", Optional.empty()),
     GAME_KICK("kick", "game", Optional.empty()),
@@ -32,21 +29,18 @@ public enum Permissions {
     GAME_LEAVE("leave", "game", Optional.empty()),
 
     //Vote Perms
-    VOTE_TIME_ALL("time.all", "vote", Optional.of(new Permissions[]{Permissions.VOTE_TIME_DAY, Permissions.VOTE_TIME_NIGHT
-            , Permissions.VOTE_TIME_SUNSET, Permissions.VOTE_TIME_NOFIXED})),
+    VOTE_TIME_ALL("time.all", "vote", SubPerms.TIME_ALL.getSubPerms()),
     VOTE_TIME_DAY("time.day", "vote", Optional.empty()),
     VOTE_TIME_NIGHT("time.night", "vote", Optional.empty()),
     VOTE_TIME_SUNSET("time.sunset", "vote", Optional.empty()),
     VOTE_TIME_NOFIXED("time.nofixed", "vote", Optional.empty()),
 
-    VOTE_GAMEMODE_ALL("gamemode.all", "vote", Optional.of(new Permissions[]{Permissions.VOTE_GAMEMODE_AMATEUR,
-            Permissions.VOTE_GAMEMODE_NORMAL, Permissions.VOTE_GAMEMODE_INSANITY})),
+    VOTE_GAMEMODE_ALL("gamemode.all", "vote", SubPerms.GAMEMODE_ALL.getSubPerms()),
     VOTE_GAMEMODE_AMATEUR("gamemode.amateur", "vote", Optional.empty()),
     VOTE_GAMEMODE_NORMAL("gamemode.normal", "vote", Optional.empty()),
     VOTE_GAMEMODE_INSANITY("gamemode.insanity", "vote", Optional.empty()),
 
-    VOTE_BOARDMODE_ALL("boardmode.all", "vote", Optional.of(new Permissions[]{Permissions.VOTE_BOARDMODE_LINE, Permissions.VOTE_BOARDMODE_FULLHOUSE,
-            Permissions.VOTE_BOARDMODE_DIAGONAL, Permissions.VOTE_BOARDMODE_SPREAD})),
+    VOTE_BOARDMODE_ALL("boardmode.all", "vote", SubPerms.BOARDMODE_ALL.getSubPerms()),
     VOTE_BOARDMODE_LINE("boardmode.line", "vote", Optional.empty()),
     VOTE_BOARDMODE_FULLHOUSE("boardmode.fullhouse", "vote", Optional.empty()),
     VOTE_BOARDMODE_DIAGONAL("boardmode.diagonal", "vote", Optional.empty()),
