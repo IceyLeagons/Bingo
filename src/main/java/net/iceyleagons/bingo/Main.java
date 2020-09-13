@@ -48,7 +48,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
         ScoreboardLib.setPluginInstance(this);
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
-        commandManager.loadCommandClass(SaveStructure.class)
+        commandManager.loadCommandClass(SaveStructure.class);
         bungeeMessenger = new BungeeMessenger(this);
 
         DatabaseParams databaseParams = new DatabaseParams("asd", "asd", "asd");
