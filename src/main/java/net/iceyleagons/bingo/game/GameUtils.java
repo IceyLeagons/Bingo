@@ -42,57 +42,60 @@ public class GameUtils {
     }
 
     public static boolean checkForWin(boolean[][] checkMatrix, BoardMode boardMode) {
-        int count = 0;
-        int size = MapImage.GRID_SIZE;
+        try {
+            int count = 0;
+            int size = MapImage.GRID_SIZE;
 
-        if (boardMode == BoardMode.FULL_HOUSE) {
-            /*===Full House===*/
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
-                    if (!checkMatrix[i][j]) return false; //At least one cell is not checked.
+            if (boardMode == BoardMode.FULL_HOUSE) {
+                /*===Full House===*/
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
+                        if (!checkMatrix[i][j]) return false; //At least one cell is not checked.
+                    }
                 }
-            }
-            return true;
+                return true;
 
-        } else if (boardMode == BoardMode.LINE) {
+            } else if (boardMode == BoardMode.LINE) {
 
 
-            for (int i = 0; i < size; i++) {
-                count = 0;
-                for (int j = 0; j < size; j++) {
-                    if (checkMatrix[i][j]) {
-                        count++;
-                        if (count == size)
-                            return true; //There are size amount of connected checked cells -> size in a line
-                    } else count = 0;
-                }
-            }
-
-            for (int i = 0; i < size; i++) {
-                count = 0;
-                for (int j = 0; j < size; j++) {
-                    if (checkMatrix[j][i]) {
-                        count++;
-                        if (count == size)
-                            return true; //There are size amount of connected checked cells -> size in a line
-                    } else count = 0;
-                }
-            }
-
-        } else if (boardMode == BoardMode.SPREAD) {
-
-        } else if (boardMode == BoardMode.DIAGONAL) {
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; i < size; i++) {
-                    for (int m = 0; m < size; m++) {
-                        if (checkMatrix[i+m][j+m]) {
+                for (int i = 0; i < size; i++) {
+                    count = 0;
+                    for (int j = 0; j < size; j++) {
+                        if (checkMatrix[i][j]) {
                             count++;
-                            if (count == size) return true;
+                            if (count == size)
+                                return true; //There are size amount of connected checked cells -> size in a line
+                        } else count = 0;
+                    }
+                }
+
+                for (int i = 0; i < size; i++) {
+                    count = 0;
+                    for (int j = 0; j < size; j++) {
+                        if (checkMatrix[j][i]) {
+                            count++;
+                            if (count == size)
+                                return true; //There are size amount of connected checked cells -> size in a line
+                        } else count = 0;
+                    }
+                }
+
+            } else if (boardMode == BoardMode.SPREAD) {
+
+            } else if (boardMode == BoardMode.DIAGONAL) {
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; i < size; i++) {
+                        for (int m = 0; m < size; m++) {
+                            if (checkMatrix[i + m][j + m]) {
+                                count++;
+                                if (count == size) return true;
+                            } else count = 0;
                         }
-                        else count = 0;
                     }
                 }
             }
+        } catch (ArrayIndexOutOfBoundsException ignored ) {
+            //Ignoring
         }
         return false;
     }
