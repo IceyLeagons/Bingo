@@ -17,32 +17,33 @@ import java.util.concurrent.ExecutionException;
  * @author TOTHTOMI
  */
 public class JSON implements Freezer {
+    static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     //In the object array the 1st element has to be an Integer when the update happened
-    private HashMap<Integer,Object[]> cache;
+    private HashMap<Integer, Object[]> cache;
     private final Type typeOfHashMap;
     private final Integer version;
     private Long lastUpdate;
     private final String name;
     private final File file;
 
-    public JSON(File subFolder,String name, int version) {
+    public JSON(File subFolder, String name, int version) {
         this.name = name;
         if (subFolder != null)
-        this.file = new File(subFolder,name+".json");
-        else this.file = new File(name+".json");
+            this.file = new File(subFolder, name + ".json");
+        else this.file = new File(name + ".json");
         this.cache = new HashMap<>();
-        typeOfHashMap = new TypeToken<Map<String, String>>() { }.getType();
+        typeOfHashMap = new TypeToken<Map<String, String>>() {
+        }.getType();
         this.version = version;
         this.lastUpdate = System.currentTimeMillis();
     }
 
-    private HashMap<Integer,Object[]> loadFromFile() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private HashMap<Integer, Object[]> loadFromFile() {
         try (FileInputStream inputStream = new FileInputStream(file)) {
             try (InputStreamReader inputStreamReader = new InputStreamReader(inputStream)) {
                 try (BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
-                    return gson.fromJson(bufferedReader,typeOfHashMap);
+                    return gson.fromJson(bufferedReader, typeOfHashMap);
                 }
             }
         } catch (IOException e) {
@@ -52,7 +53,6 @@ public class JSON implements Freezer {
     }
 
     private boolean loadToFile() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(cache);
         try (FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write(json);
@@ -92,14 +92,13 @@ public class JSON implements Freezer {
     public CompletableFuture<Boolean> push() {
         updateLastUpdate();
         return CompletableFuture.supplyAsync(this::loadToFile);
-
     }
 
     @Override
     public CompletableFuture<Boolean> pull() {
         updateLastUpdate();
         return CompletableFuture.supplyAsync(() -> {
-            HashMap<Integer,Object[]> loaded = loadFromFile();
+            HashMap<Integer, Object[]> loaded = loadFromFile();
             if (loaded != null) {
                 this.cache = loaded;
                 return true;
@@ -109,7 +108,7 @@ public class JSON implements Freezer {
     }
 
     @Override
-    public boolean update()  {
+    public boolean update() {
         updateLastUpdate();
         try {
             if (push().get())
@@ -124,7 +123,7 @@ public class JSON implements Freezer {
 
     @Override
     public void add(int id, Object o) {
-        cache.put(id,new Object[]{System.currentTimeMillis(),o});
+        cache.put(id, new Object[]{System.currentTimeMillis(), o});
     }
 
     @Override

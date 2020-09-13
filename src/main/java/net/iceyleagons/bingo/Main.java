@@ -8,6 +8,7 @@ import net.iceyleagons.bingo.apis.WorldGenerator;
 import net.iceyleagons.bingo.bungee.BungeeMessenger;
 import net.iceyleagons.bingo.commands.CommandManager;
 import net.iceyleagons.bingo.commands.cmds.Join;
+import net.iceyleagons.bingo.commands.cmds.SaveStructure;
 import net.iceyleagons.bingo.commands.cmds.Vote;
 import net.iceyleagons.bingo.game.*;
 import net.iceyleagons.bingo.listeners.BukkitListeners;
@@ -47,18 +48,17 @@ public class Main extends JavaPlugin implements CommandExecutor {
         ScoreboardLib.setPluginInstance(this);
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
+        commandManager.loadCommandClass(SaveStructure.class)
         bungeeMessenger = new BungeeMessenger(this);
 
-
-        DatabaseParams databaseParams = new DatabaseParams("asd","asd","asd");
+        DatabaseParams databaseParams = new DatabaseParams("asd", "asd", "asd");
         HibernateManager.setDatabaseParams(databaseParams);
         HibernateManager.setDatabaseType(DatabaseType.MYSQL);
         HibernateManager.setEnabled(false); //Disabling Hibernate, so we don't throw an error because of the insufficient database params.
 
         GameManager.loadPlayersFromDatabase();
 
-
-       // setupCommands(commandManager);
+        // setupCommands(commandManager);
         /*tinyProtocol = new TinyProtocol(this) {
             @Override
             public Object onPacketInAsync(Player sender, Channel channel, Object packet) {
@@ -90,6 +90,6 @@ public class Main extends JavaPlugin implements CommandExecutor {
     }
 
     public File getResourceFile(String name) {
-        return new File(Main.class.getResource("/"+name).getFile());
+        return new File(Main.class.getResource("/" + name).getFile());
     }
 }

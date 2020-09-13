@@ -57,9 +57,9 @@ public interface Freezer {
      * Adds an {@link Object} to the cache
      *
      * @param id the id of the {@link Object}, !must be unique(the same ID can exist in multiple freezers but not in the same)!
-     * @param o the Object to add
+     * @param o  the Object to add
      */
-    void add(int id,Object o);
+    void add(int id, Object o);
 
     /**
      * Removes an {@link Object} from the cache
