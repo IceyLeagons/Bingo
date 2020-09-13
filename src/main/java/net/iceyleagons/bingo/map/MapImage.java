@@ -1,6 +1,7 @@
 package net.iceyleagons.bingo.map;
 
 import lombok.SneakyThrows;
+import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.texture.MaterialTexture;
 import org.bukkit.Material;
 
@@ -20,9 +21,9 @@ import java.util.stream.Collectors;
 public class MapImage {
 
 
-    private Map<MaterialTexture,Material> matrixMap;
-    private Map<MaterialTexture,Integer[]> textureMap;
-    private Map<Material,MaterialTexture> matrixSwapped;
+    private Map<MaterialTexture, Material> matrixMap;
+    private Map<MaterialTexture, Integer[]> textureMap;
+    private Map<Material, MaterialTexture> matrixSwapped;
     public static BufferedImage checkMark = null;
     public static Font minecraftFont = null;
 
@@ -30,16 +31,18 @@ public class MapImage {
     public MapImage(Map<MaterialTexture, Material> matrixMap) {
         this.matrixMap = matrixMap;
         textureMap = new HashMap<>();
-        if (minecraftFont ==null) {minecraftFont = Font.createFont(Font.TRUETYPE_FONT,new FileInputStream("mc.ttf"));
-        minecraftFont = minecraftFont.deriveFont(16F);}
-        File file = new File("check.png");
-        if (checkMark == null) checkMark = resize(ImageIO.read(file),16,16);
+        if (minecraftFont == null) {
+            minecraftFont = Font.createFont(Font.TRUETYPE_FONT, Main.main.getResource("mc.ttf"));
+            minecraftFont = minecraftFont.deriveFont(16F);
+        }
+        File file = Main.main.getResourceFile("check.png");
+        if (checkMark == null) checkMark = resize(ImageIO.read(file), 16, 16);
         this.matrixSwapped = matrixMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
         init();
     }
 
     @SneakyThrows
-    public void update(Map<MaterialTexture,Material> matrixMap) {
+    public void update(Map<MaterialTexture, Material> matrixMap) {
         this.matrixMap = matrixMap;
         this.matrixSwapped = matrixMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
         init();
@@ -49,14 +52,14 @@ public class MapImage {
     public static final int SIZE = 128;
 
     private static BufferedImage getBackground() {
-        BufferedImage background = new BufferedImage(SIZE,SIZE,BufferedImage.TYPE_INT_RGB);
+        BufferedImage background = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics2Db = background.createGraphics();
         graphics2Db.setPaint(Color.decode("#97acc4"));
         graphics2Db.fillRect(1, 1, SIZE - 2, SIZE - 2);
         return background;
     }
 
-    public Map<MaterialTexture,Material> getItems() {
+    public Map<MaterialTexture, Material> getItems() {
         return matrixMap;
     }
 
@@ -81,7 +84,9 @@ public class MapImage {
         checkMatrix[x][y] = value;
     }
 
-    public boolean isChecked(int x, int y) { return checkMatrix[x][y];}
+    public boolean isChecked(int x, int y) {
+        return checkMatrix[x][y];
+    }
 
     @SneakyThrows
     public void init() {
@@ -91,7 +96,7 @@ public class MapImage {
             for (int j = 0; j < GRID_SIZE; j++) {
                 checkMatrix[i][j] = false;
                 MaterialTexture materialTexture = text[m];
-                this.textureMap.put(materialTexture,new Integer[]{i,j});
+                this.textureMap.put(materialTexture, new Integer[]{i, j});
                 matrix[i][j] = ItemIcon.getIcon(materialTexture);
                 m++;
             }
@@ -99,10 +104,8 @@ public class MapImage {
     }
 
     public BufferedImage create() throws IOException {
-
         BasicStroke small = new BasicStroke(0.3f);
         BasicStroke big = new BasicStroke(2f);
-
 
         BufferedImage content = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphics2D = content.createGraphics();
@@ -114,9 +117,6 @@ public class MapImage {
         graphics2D.drawRect(1, 1, SIZE - 2, SIZE - 2);
         graphics2D.setStroke(small);
 
-
-
-
         graphics2D.setColor(Color.BLACK);
         graphics2D.setStroke(big);
         graphics2D.setFont(minecraftFont);
@@ -125,19 +125,19 @@ public class MapImage {
 
         createGrid(graphics2D, 95, 16, 25, GRID_SIZE, Color.BLACK, matrix);
 
-        BufferedImage image = new BufferedImage(SIZE,SIZE,BufferedImage.TYPE_INT_ARGB);
+        BufferedImage image = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_ARGB);
         Graphics g = image.getGraphics();
-        g.drawImage(getBackground(),0,0,null);
-        g.drawImage(content,0,0,null);
-        BufferedImage checks = drawCheckMarks(95,15,25,GRID_SIZE,checkMatrix);
-        g.drawImage(checks,0,0,null);
+        g.drawImage(getBackground(), 0, 0, null);
+        g.drawImage(content, 0, 0, null);
+        BufferedImage checks = drawCheckMarks(95, 15, 25, GRID_SIZE, checkMatrix);
+        g.drawImage(checks, 0, 0, null);
 
         return image;
     }
 
     @SneakyThrows
     private BufferedImage drawCheckMarks(int gridSize, int x, int y, int grid, boolean[][] matrix) {
-        BufferedImage checks = new BufferedImage(SIZE,SIZE,BufferedImage.TYPE_INT_ARGB);
+        BufferedImage checks = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_ARGB);
 
         Graphics2D graphics2D = checks.createGraphics();
         int gX = 0;
@@ -160,7 +160,7 @@ public class MapImage {
     }
 
 
-    private  void createGrid(Graphics2D graphics2D, int gridSize, int x, int y, int grid, Color color, BufferedImage[][] matrix) {
+    private void createGrid(Graphics2D graphics2D, int gridSize, int x, int y, int grid, Color color, BufferedImage[][] matrix) {
         drawImages(graphics2D, gridSize, x, y, grid, matrix);
 
 
@@ -206,10 +206,10 @@ public class MapImage {
         return dimg;
     }
 
-    public static BufferedImage fromFile(File file) throws IOException {
-        return ImageIO.read(file);
-    }
-
+    /**
+     * @deprecated unused. Useless. bad.
+     */
+    @Deprecated
     public static void toFile(BufferedImage image) throws IOException {
         File file = new File("test.png");
         ImageIO.write(image, "png", file);
