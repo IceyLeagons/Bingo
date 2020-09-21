@@ -13,6 +13,7 @@ import net.iceyleagons.bingo.game.voting.Vote;
 import net.iceyleagons.bingo.game.voting.VoteMenu;
 import net.iceyleagons.bingo.map.MapImage;
 import net.iceyleagons.bingo.texture.MaterialTexture;
+import net.iceyleagons.frostedpanel.FrostedPanel;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
@@ -263,7 +264,7 @@ public class Game {
         lobbyCountdown.cancel();
         setGameState(GameState.INTERMISSION);
         teams.values().forEach(team -> {
-            team.showSidebar(true);
+            team.showSidebar();
             team.giveMapItem();
         });
 
@@ -281,6 +282,7 @@ public class Game {
             }
             countdown.getAndDecrement();
         }, 0L, 20L);
+
     }
 
     private void stopIntermission() {

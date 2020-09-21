@@ -110,8 +110,6 @@ public class GameUtils {
     }
 
     public static void allocateTeamLocations(Game game, int range) {
-        Random random = new Random();
-
         game.getTeams().values().forEach(team -> {
             Vector2 v2 = Vector2.random(range, range);
             Block block = game.getWorld().getHighestBlockAt(v2.x, v2.z);
@@ -145,7 +143,7 @@ public class GameUtils {
         }
     }
 
-    public static void spawnFireworks(Location location, int amount) {
+    public static void spawnFireworks(Location location) {
         Firework fw = (Firework) Objects.requireNonNull(location.getWorld()).spawnEntity(location, EntityType.FIREWORK);
         fw.setMetadata("nodamage", new FixedMetadataValue(Main.main, true));
         FireworkMeta fwm = fw.getFireworkMeta();

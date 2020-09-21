@@ -25,12 +25,14 @@ public class VoteMenu {
     private String name;
     private List<String> description;
     private InventoryFactory inventoryFactory;
+    private Map<Player,InventoryFactory> inventories;
     private Map<BingoPlayer,Integer> votes;
     private Map<Integer,Integer> voteOptions;
 
     public VoteMenu(Material placeholder, String name, List<String> description) {
         setPlaceholder(placeholder);
         setName(name);
+        setInventories(new HashMap<>());
         setDescription(description);
         setInventoryFactory(new InventoryFactory(name,27,new ItemStack(Material.AIR),true));
         setVotes(new HashMap<>());

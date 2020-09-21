@@ -56,8 +56,15 @@ public class InventoryFactory {
     @Getter
     private Map<Player,InventoryFactory> playerInventories = new HashMap<>();
 
+    private int size;
+    @Getter
+    private String name;
+    @Getter
+    private ItemStack placeholder;
+    @Getter
+    private boolean deny;
 
-    public InventoryFactory(String name, int size) {
+    public InventoryFactory(String name, int size, boolean deny) {
         new InventoryFactory(name, size, null, true);
     }
 
@@ -66,6 +73,12 @@ public class InventoryFactory {
         if (size == 0) {
             return;
         }
+
+        this.name = name;
+        this.size = size;
+        this.placeholder = placeholder;
+        this.deny = deny;
+
         debounce = false;
         listener = new Listener() {
             @EventHandler
@@ -102,7 +115,7 @@ public class InventoryFactory {
             @EventHandler
             public void onClose(InventoryCloseEvent e) {
                 if (e.getPlayer() instanceof Player) {
-                    opened.remove(e.getPlayer());
+                    opened.remove(((Player) e.getPlayer()));
                     if (inventories.containsKey(e.getInventory())) {
                         InventoryFactory current = inventories.get(e.getInventory());
 
@@ -131,7 +144,7 @@ public class InventoryFactory {
     }
 
     public boolean isOpen() {
-        return currentOpen > 0 ? true : false;
+        return currentOpen > 0;
     }
 
     public Inventory getSourceInventory() {
@@ -155,6 +168,7 @@ public class InventoryFactory {
 
     public void setItem(ItemStack itemstack, String displayname, Integer slot, ClickRunnable executeOnClick, String... description) {
         ItemMeta im = itemstack.getItemMeta();
+        assert im != null;
         im.addItemFlags(ItemFlag.HIDE_ATTRIBUTES,
                 ItemFlag.HIDE_DESTROYS,
                 ItemFlag.HIDE_ENCHANTS,
@@ -210,6 +224,11 @@ public class InventoryFactory {
             inventories.remove(inv);
             registered = false;
         }
+    }
+
+    @SneakyThrows
+    public InventoryFactory makeCopy() {
+        return (InventoryFactory) clone();
     }
 
     public static abstract class ClickRunnable {

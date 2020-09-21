@@ -1,6 +1,7 @@
 package net.iceyleagons.bingo.game.voting;
 
 import lombok.Data;
+import lombok.SneakyThrows;
 import net.iceyleagons.bingo.utils.InventoryFactory;
 import net.iceyleagons.bingo.utils.ItemFactory;
 import org.bukkit.Material;
@@ -20,16 +21,24 @@ public class Vote {
 
     private Map<Integer,VoteMenu> menus;
     private InventoryFactory inventoryFactory;
+    private Map<Player,InventoryFactory> inventories;
     private boolean closed;
 
     public Vote() {
         setMenus(new HashMap<>());
         setInventoryFactory(new InventoryFactory("Voting",27,new ItemStack(Material.AIR),true));
+        setInventories(new HashMap<>());;
     }
+
 
     public void open(Player player) {
         if (isClosed()) return;
-        inventoryFactory.openInventory(player);
+        if (inventories.containsKey(player)) inventories.get(player).openInventory(player);
+        else {
+            InventoryFactory playerFactory =  inventoryFactory.makeCopy();
+            inventories.put(player,playerFactory);
+            playerFactory.openInventory(player);
+        }
     }
 
     public void closeAll() {
@@ -43,7 +52,13 @@ public class Vote {
             @Override
             public void run(InventoryClickEvent e) {
                 e.getWhoClicked().closeInventory();
-                voteMenu.getInventoryFactory().openInventory((Player) e.getWhoClicked());
+                Player player = (Player) e.getWhoClicked();
+                if (voteMenu.getInventories().containsKey(player)) voteMenu.getInventories().get(player).openInventory(player);
+                else {
+                    InventoryFactory playerFactory = voteMenu.getInventoryFactory().makeCopy();
+                    voteMenu.getInventories().put(player,playerFactory);
+                    playerFactory.openInventory(player);
+                }
             }
         });
     }

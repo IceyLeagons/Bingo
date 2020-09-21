@@ -10,6 +10,7 @@ import net.iceyleagons.bingo.commands.CommandManager;
 import net.iceyleagons.bingo.commands.cmds.Join;
 import net.iceyleagons.bingo.commands.cmds.SaveStructure;
 import net.iceyleagons.bingo.commands.cmds.Vote;
+import net.iceyleagons.bingo.config.MainConfig;
 import net.iceyleagons.bingo.game.*;
 import net.iceyleagons.bingo.listeners.BukkitListeners;
 import org.bukkit.Bukkit;
@@ -27,6 +28,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
     public static Main main;
     public static Game testGame;
     public static BungeeMessenger bungeeMessenger;
+    public static MainConfig mainConfig;
 
 
     @Override
@@ -36,10 +38,8 @@ public class Main extends JavaPlugin implements CommandExecutor {
         CommandManager commandManager = new CommandManager(this, "Bingo", "bingo.node", "bingo", "b");
         BukkitListeners.register(this);
         ScoreboardLib.setPluginInstance(this);
-        commandManager.loadCommandClass(Join.class);
-        commandManager.loadCommandClass(Vote.class);
-        commandManager.loadCommandClass(SaveStructure.class);
         bungeeMessenger = new BungeeMessenger(this);
+        mainConfig = new MainConfig(this);
 
         GameManager.loadPlayersFromDatabase();
 
@@ -51,6 +51,9 @@ public class Main extends JavaPlugin implements CommandExecutor {
     }
 
     private void setupCommands(CommandManager commandManager) {
+        commandManager.loadCommandClass(Join.class);
+        commandManager.loadCommandClass(Vote.class);
+        commandManager.loadCommandClass(SaveStructure.class);
     }
 
     @Override

@@ -118,7 +118,7 @@ public class Team {
                 String tname = isUsingIntegerNames() ? "#"+teamName : teamName;
                 getGame().broadcast(String.format("&bThe &l%s &r&b team has found an other item. Their progress is: &c%d items&b.",
                         getTeamColor() + tname, checkedItems), Optional.of(getPlayers()));
-                GameUtils.spawnFireworks(player.getLocation(), 1);
+                GameUtils.spawnFireworks(player.getLocation());
                 if (GameUtils.checkForWin(getMapImage().getCheckMatrix(), getGame().getBoardMode())) {
                     getGame().declareWinner(this);
                 }
@@ -131,16 +131,9 @@ public class Team {
         players.forEach(players -> {
             players.getPlayer().setBedSpawnLocation(spawnLocation, true);
         });
-
-        /*for (BingoPlayer bplayer : players)
-            for (BingoPlayer bingoPlayer : players)
-                if (bplayer != bingoPlayer)
-                    PacketUtils.GLOW.switchGlowing(bplayer.getPlayer(), true, players.parallelStream().map(BingoPlayer::getPlayer)
-                            .collect(Collectors.toList()).toArray(new Player[players.size()]));*/
-
     }
 
-    public void showSidebar(boolean value) {
+    public void showSidebar() {
         if (getScoreboardHandler() == null) initScoreboard();
         getPlayers().forEach(player -> {
             Player p = player.getPlayer();
