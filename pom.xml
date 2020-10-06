@@ -65,7 +65,7 @@
         <dependency>
             <groupId>org.inventivetalent</groupId>
             <artifactId>glowapi</artifactId>
-            <version>1.4.13-SNAPSHOT</version>
+            <version>1.4.2</version>
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
