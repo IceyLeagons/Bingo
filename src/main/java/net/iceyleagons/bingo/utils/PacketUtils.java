@@ -132,6 +132,7 @@ public class PacketUtils {
             Object pc = getHandle.invoke(cp);
             sendPacket.invoke(pc, packet);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         /*
          * CraftPlayer cp = (CraftPlayer) p; PlayerConnection pc =
@@ -157,6 +158,7 @@ public class PacketUtils {
                  */
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
