@@ -180,6 +180,7 @@ public class PacketUtils {
                  */
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -190,6 +191,7 @@ public class PacketUtils {
             for (Object packet : packets)
                 sendPacket.invoke(pc, packet);
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -208,6 +210,7 @@ public class PacketUtils {
                     sendPacket.invoke(pc, packet);
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -226,6 +229,7 @@ public class PacketUtils {
                     sendPacket.invoke(pc, packet);
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -341,7 +345,7 @@ public class PacketUtils {
             try {
                 Constructor<?> ctor = playOutTitle.getConstructor(titleAction.getClass(), chatBaseComponent.getClass());
                 return ctor.newInstance(titleAction, chatBaseComponent);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -350,7 +354,7 @@ public class PacketUtils {
             try {
                 Constructor<?> ctor = playOutTitle.getConstructor(Integer.class, Integer.class, Integer.class);
                 return ctor.newInstance(fadeIn, stay, fadeOut);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -369,7 +373,7 @@ public class PacketUtils {
             try {
                 return playOutChat.getConstructor(PacketUtils.chatBaseComponent.getClass())
                         .newInstance(chatBaseComponent);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -392,7 +396,7 @@ public class PacketUtils {
         public static int getLatency(@NonNull Player player) {
             try {
                 return getHandle.invoke(player).getClass().getField("ping").getInt(null);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return 0;
         }
@@ -447,7 +451,7 @@ public class PacketUtils {
         private static Object getNMSItem(ItemStack item) {
             try {
                 return craftItemStack.getMethod("asNMSCopy", ItemStack.class).invoke(item);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -456,7 +460,7 @@ public class PacketUtils {
             try {
                 Constructor<?> ctor = playOutCooldown.getConstructor(item.getClass(), Integer.class);
                 return ctor.newInstance(item, cooldown);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -466,7 +470,7 @@ public class PacketUtils {
                 Object nmsItem = getNMSItem(item);
                 Constructor<?> ctor = playOutCooldown.getConstructor(item.getClass(), Integer.class);
                 return ctor.newInstance(nmsItem, cooldown);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -476,7 +480,7 @@ public class PacketUtils {
                 Object nmsItem = getNMSItem(item);
                 Constructor<?> ctor = playOutCooldown.getConstructor(item.getClass(), Integer.class);
                 return ctor.newInstance(nmsItem, 0);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -485,7 +489,7 @@ public class PacketUtils {
             try {
                 Constructor<?> ctor = playOutCooldown.getConstructor(item.getClass(), Integer.class);
                 return ctor.newInstance(item, 0);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -508,7 +512,7 @@ public class PacketUtils {
         public static Object getRespawn() {
             try {
                 return playOutRespawn.newInstance();
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return null;
         }
@@ -518,7 +522,7 @@ public class PacketUtils {
         public static Object getNMS(ItemStack item) {
             try {
                 return craftItemStack.getMethod("asNMSCopy", ItemStack.class).invoke(item);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
                 return null;
             }
         }
