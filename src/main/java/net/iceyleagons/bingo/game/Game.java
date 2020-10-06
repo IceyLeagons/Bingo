@@ -122,6 +122,10 @@ public class Game {
                 world.setTime(1000);
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
                 break;
+            default:
+                world.setTime(1000);
+                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
+                break;
         }
     }
 

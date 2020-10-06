@@ -246,6 +246,12 @@ public class SimpleScoreboard implements Scoreboard {
             if (team == null) return name;
             if (team.getSuffix() == null) return team.getPrefix() + name;
             return team.getPrefix() + name + team.getSuffix();
+
+        
+        }
+        @Override
+        public String getName() {
+            return name;
         }
 
         @Override
@@ -253,10 +259,6 @@ public class SimpleScoreboard implements Scoreboard {
             return true;
         }
 
-        @Override
-        public String getName() {
-            return name;
-        }
 
         @Override
         public UUID getUniqueId() {
@@ -311,12 +313,34 @@ public class SimpleScoreboard implements Scoreboard {
         }
 
         @Override
-        public void decrementStatistic(Statistic statistic) throws IllegalArgumentException {
+        public void incrementStatistic(Statistic statistic, int i) throws IllegalArgumentException {
 
         }
 
         @Override
-        public void incrementStatistic(Statistic statistic, int i) throws IllegalArgumentException {
+        public void incrementStatistic(Statistic statistic, Material material) throws IllegalArgumentException {
+
+        }
+
+        @Override
+        public void incrementStatistic(Statistic statistic, Material material, int i) throws IllegalArgumentException {
+
+        }
+
+
+        @Override
+        public void incrementStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
+
+        }
+
+        @Override
+        public void decrementStatistic(Statistic statistic) throws IllegalArgumentException {
+
+        }
+
+
+        @Override
+        public void decrementStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
 
         }
 
@@ -326,17 +350,13 @@ public class SimpleScoreboard implements Scoreboard {
         }
 
         @Override
-        public void setStatistic(Statistic statistic, int i) throws IllegalArgumentException {
+        public void decrementStatistic(Statistic statistic, Material material, int i) throws IllegalArgumentException {
 
         }
 
-        @Override
-        public int getStatistic(Statistic statistic) throws IllegalArgumentException {
-            return 0;
-        }
 
         @Override
-        public void incrementStatistic(Statistic statistic, Material material) throws IllegalArgumentException {
+        public void decrementStatistic(Statistic statistic, EntityType entityType, int i) {
 
         }
 
@@ -345,18 +365,29 @@ public class SimpleScoreboard implements Scoreboard {
 
         }
 
+
+        @Override
+        public int getStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
+            return 0;
+        }
+
         @Override
         public int getStatistic(Statistic statistic, Material material) throws IllegalArgumentException {
             return 0;
         }
 
         @Override
-        public void incrementStatistic(Statistic statistic, Material material, int i) throws IllegalArgumentException {
+        public int getStatistic(Statistic statistic) throws IllegalArgumentException {
+            return 0;
+        }
+
+        @Override
+        public void setStatistic(Statistic statistic, int i) throws IllegalArgumentException {
 
         }
 
         @Override
-        public void decrementStatistic(Statistic statistic, Material material, int i) throws IllegalArgumentException {
+        public void setStatistic(Statistic statistic, EntityType entityType, int i) {
 
         }
 
@@ -366,34 +397,10 @@ public class SimpleScoreboard implements Scoreboard {
         }
 
         @Override
-        public void incrementStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
-
-        }
-
-        @Override
-        public void decrementStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
-
-        }
-
-        @Override
-        public int getStatistic(Statistic statistic, EntityType entityType) throws IllegalArgumentException {
-            return 0;
-        }
-
-        @Override
         public void incrementStatistic(Statistic statistic, EntityType entityType, int i) throws IllegalArgumentException {
 
         }
 
-        @Override
-        public void decrementStatistic(Statistic statistic, EntityType entityType, int i) {
-
-        }
-
-        @Override
-        public void setStatistic(Statistic statistic, EntityType entityType, int i) {
-
-        }
 
         @Override
         public Map<String, Object> serialize() {
