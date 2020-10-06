@@ -152,7 +152,7 @@ public class CommandManager implements TabCompleter, CommandExecutor {
                 if(!argInstances.containsKey(c.argTypes()[argNum]))
                     try {
                         argInstances.put(c.argTypes()[argNum], c.argTypes()[argNum].newInstance());
-                    } catch (Exception e) { }
+                    } catch (Exception e) { e.printStackTrace(); }
                 AbstractArg<?> absArg = argInstances.get(c.argTypes()[argNum]);
                 return absArg.getPredictions();
             }
