@@ -81,7 +81,7 @@ public class GameUtils {
                 }
 
             } else if (boardMode == BoardMode.SPREAD) {
-
+                // TODO
             } else if (boardMode == BoardMode.DIAGONAL) {
                 for (int i = 0; i < size; i++) {
                     for (int j = 0; i < size; i++) {
@@ -94,7 +94,7 @@ public class GameUtils {
                     }
                 }
             }
-        } catch (ArrayIndexOutOfBoundsException ignored ) {
+        } catch (ArrayIndexOutOfBoundsException ignored) {
             //Ignoring
         }
         return false;
@@ -149,7 +149,7 @@ public class GameUtils {
         FireworkMeta fwm = fw.getFireworkMeta();
 
         fwm.setPower(2);
-        fwm.addEffect(FireworkEffect.builder().withColor(Color.LIME, Color.RED,Color.WHITE).flicker(true).build());
+        fwm.addEffect(FireworkEffect.builder().withColor(Color.LIME, Color.RED, Color.WHITE).flicker(true).build());
 
         fw.setFireworkMeta(fwm);
         fw.detonate();

@@ -54,7 +54,6 @@ public class ItemFactory {
      */
 
     public ItemFactory(Material material) {
-
         this.itemStack = new ItemStack(material);
         this.itemMeta = this.itemStack.getItemMeta();
 

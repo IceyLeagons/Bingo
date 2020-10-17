@@ -65,7 +65,7 @@ public class InventoryFactory {
     private boolean deny;
 
     public InventoryFactory(String name, int size, boolean deny) {
-        new InventoryFactory(name, size, null, true);
+        this(name, size, null, true);
     }
 
 
@@ -186,6 +186,9 @@ public class InventoryFactory {
             im.setLore(lore);
         }
         itemstack.setItemMeta(im);
+        System.out.println(inv);
+        System.out.println(slot);
+        System.out.println(itemstack);
         inv.setItem(slot, itemstack);
         runs.put(slot, executeOnClick);
     }

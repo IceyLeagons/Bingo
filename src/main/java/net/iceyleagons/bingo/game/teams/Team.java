@@ -1,6 +1,5 @@
 package net.iceyleagons.bingo.game.teams;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import me.tigerhix.lib.scoreboard.ScoreboardLib;
@@ -11,10 +10,12 @@ import me.tigerhix.lib.scoreboard.type.ScoreboardHandler;
 import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.game.BingoPlayer;
 import net.iceyleagons.bingo.game.Game;
+import net.iceyleagons.bingo.game.GameManager;
 import net.iceyleagons.bingo.game.GameUtils;
 import net.iceyleagons.bingo.map.BingoRenderer;
 import net.iceyleagons.bingo.map.MapImage;
 import net.iceyleagons.bingo.texture.MaterialTexture;
+import net.iceyleagons.bingo.utils.PacketUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -23,6 +24,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.MapMeta;
 import org.bukkit.map.MapView;
+import org.bukkit.util.Vector;
 
 import java.util.*;
 
@@ -98,16 +100,14 @@ public class Team {
     }
 
     public void teamMessage(Player player, String message) {
-        String msg = String.format("§8[§aTeam§8] %s%s§8: §f%s",getTeamColor(),player.getName(),message);
-        players.forEach(p -> {
-            p.getPlayer().sendMessage(msg);
-        });
+        String msg = String.format("§8[§aTeam§8] %s%s§8: §f%s", getTeamColor(), player.getName(), message);
+        players.forEach(p -> p.getPlayer().sendMessage(msg));
     }
 
     public void checkItem(ItemStack itemStack, Player player) {
         if (getGame().getItems().containsValue(itemStack.getType())) {
             MapImage mapImage = getMapImage();
-            MaterialTexture materialTexture = mapImage.getMaterialTexture(itemStack.getType());
+            MaterialTexture.Texture materialTexture = mapImage.getMaterialTexture(itemStack.getType());
             Integer[] position = mapImage.getPosition(materialTexture);
             int x = position[0];
             int y = position[1];
@@ -115,9 +115,10 @@ public class Team {
                 checkedItems++;
                 mapImage.setChecked(x, y, true);
                 bingoRenderer.update();
-                String tname = isUsingIntegerNames() ? "#"+teamName : teamName;
-                getGame().broadcast(String.format("&bThe &l%s &r&b team has found an other item. Their progress is: &c%d items&b.",
+                String tname = isUsingIntegerNames() ? "#" + teamName : teamName;
+                getGame().broadcast(String.format("&bThe &l%s &r&bteam has found an other item. Their progress is: &c%d items&b.",
                         getTeamColor() + tname, checkedItems), Optional.of(getPlayers()));
+                teamBroadcast(String.format("&c&l%s &bhas found an item: %s",player.getName(), PacketUtils.TRANSLATIONS.get(itemStack)));
                 GameUtils.spawnFireworks(player.getLocation());
                 if (GameUtils.checkForWin(getMapImage().getCheckMatrix(), getGame().getBoardMode())) {
                     getGame().declareWinner(this);
@@ -128,21 +129,56 @@ public class Team {
     }
 
     public void releasePlayers() {
-        players.forEach(players -> {
-            players.getPlayer().setBedSpawnLocation(spawnLocation, true);
-        });
+        players.forEach(players -> players.getPlayer().setBedSpawnLocation(spawnLocation, true));
     }
 
     public void showSidebar() {
         if (getScoreboardHandler() == null) initScoreboard();
+
         getPlayers().forEach(player -> {
             Player p = player.getPlayer();
             Scoreboard scoreboard = ScoreboardLib.createScoreboard(p).setHandler(scoreboardHandler);
-            scoreboard.setUpdateInterval(20L);
+            scoreboard.setUpdateInterval(60L);
             scoreboard.activate();
             player.setScoreboard(scoreboard);
-
         });
+    }
+
+    private String calculateDirection(Player originPlayer, Player endPlayer) {
+        Location origin = originPlayer.getLocation();
+        Vector target = endPlayer.getLocation().toVector();
+        origin.setDirection(target.subtract(origin.toVector()));
+        float oYaw = origin.getYaw() + 180;
+        float yaw = Math.round(oYaw / 45);
+
+        String west = "←";
+        String north_west = "↖";
+        String north = "↑";
+        String north_east = "↗";
+        String east = "→";
+        String south_east = "↘";
+        String south = "↓";
+        String south_west = "↙";
+
+        switch ((int) yaw) {
+            default:
+            case 1:
+                return west;
+            case 2:
+                return north_west;
+            case 3:
+                return north;
+            case 4:
+                return north_east;
+            case 5:
+                return east;
+            case 6:
+                return south_east;
+            case 7:
+                return south;
+            case 8:
+                return south_west;
+        }
     }
 
     private void initScoreboard() {
@@ -154,19 +190,24 @@ public class Team {
 
             @Override
             public List<Entry> getEntries(Player player) {
-                EntryBuilder entryBuilder = new EntryBuilder();
-                String tname = isUsingIntegerNames() ? "#"+teamName : teamName;
-                entryBuilder.blank()
+                EntryBuilder scoreboardText = new EntryBuilder();
+                scoreboardText.blank()
                         .next("&8Team: ")
-                        .next(getTeamColor() + tname)
+                        .next(" " + getTeamColor() + (isUsingIntegerNames() ? "#" + teamName : teamName))
                         .next("&8Game mode: ")
-                        .next("§c"+getGame().getBoardMode().name().replaceAll("_", " "))
+                        .next(" §c" + getGame().getBoardMode().name().replaceAll("_", " "))
                         .blank()
                         .next("&8Team members: ");
-                players.forEach(p -> entryBuilder.next(" §c" + p.getPlayer().getName()));
-                return entryBuilder.build();
+                GameManager.getBingoPlayer(player).getTeam().players.forEach(p -> scoreboardText.next((p.isAlive() ? " §a" : " §c") + " - " + p.getPlayer().getName()));
+                if (!GameManager.getBingoPlayer(player).isAlive())
+                    scoreboardText.blank().next("&cOUT!");
+                return scoreboardText.build();
             }
         };
+    }
+
+    public boolean isFull() {
+        return getMaxPlayers() == getPlayers().size();
     }
 
     public void giveMapItem() {
@@ -181,7 +222,7 @@ public class Team {
 
         ChatColor color = getTeamColor();
         bingoPlayer.getPlayer().setPlayerListName(String.format("%s§l[%s]§r%s %s", color, teamName, color, bingoPlayer.getPlayer().getName()));
-        String tname = isUsingIntegerNames() ? "#"+teamName : teamName;
+        String tname = isUsingIntegerNames() ? "#" + teamName : teamName;
         bingoPlayer.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&',
                 String.format("%s&bYou've joined the %s team&b.", Main.prefix, teamColor + tname)));
         bingoPlayer.getPlayer().teleport(this.spawnLocation);
@@ -209,8 +250,8 @@ public class Team {
     public static Map<Integer, Team> allocateTeamsForGame(Game game) {
         int numOfTeams = game.getAmountOfTeams();
         int numOfPlayersPerTeam = game.getMaxPlayers() / game.getAmountOfTeams();
-        boolean useIntegerNames = false;
-        if (numOfTeams > colors.length) useIntegerNames = true;
+        boolean useIntegerNames = true;
+        //if (numOfTeams > colors.length) useIntegerNames = true;
 
         Map<Integer, Team> teams = new HashMap<>();
 
@@ -221,7 +262,7 @@ public class Team {
             Team team = new Team(game, id, numOfPlayersPerTeam);
             if (useIntegerNames) {
                 team.setTeamColor(ChatColor.YELLOW);
-                team.setTeamName(String.valueOf(i+1));
+                team.setTeamName(String.valueOf(i + 1));
                 team.setUsingIntegerNames(true);
             } else {
                 team.setTeamColor(colors[i]);

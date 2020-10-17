@@ -89,6 +89,12 @@ public class BingoPlayer {
     @Getter
     @Setter
     private double maxHealth = 20.0;
+    @Getter
+    @Setter
+    private boolean alive = true;
+    @Getter
+    @Setter
+    private int remainingLives = 99999;
 
     public BingoPlayer(Player player) {
         this.player = player;
@@ -169,8 +175,9 @@ public class BingoPlayer {
         foodLevel = player.getFoodLevel();
         health = player.getHealth();
         maxHealth = Objects.requireNonNull(player.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getBaseValue();
-        if (player.getBedSpawnLocation() != null)
-            spawnpoint = player.getBedSpawnLocation();
+       // if (player.getBedSpawnLocation() != null) {
+        //    spawnpoint = player.getBedSpawnLocation();
+        //}
         saturation = player.getSaturation();
     }
 
@@ -189,8 +196,8 @@ public class BingoPlayer {
         player.getInventory().setContents(inventoryContents);
         player.getInventory().setExtraContents(extraContents);
         player.getInventory().setStorageContents(storageContents);
-        if (spawnpoint != null)
-            player.setBedSpawnLocation(spawnpoint, false);
+       // if (spawnpoint != null)
+        //    player.setBedSpawnLocation(spawnpoint, false);
         player.setPlayerListName(playerListName);
         player.setExp(exp);
         player.setExhaustion(exhaustion);

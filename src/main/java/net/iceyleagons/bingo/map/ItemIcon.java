@@ -1,30 +1,23 @@
 package net.iceyleagons.bingo.map;
 
-import net.iceyleagons.bingo.Main;
+import lombok.SneakyThrows;
 import net.iceyleagons.bingo.texture.MaterialTexture;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 /**
  * @author TOTHTOMI
  */
 public class ItemIcon {
-
     private static BufferedImage atlas = null;
 
-    static {
-        try {
-            atlas = ImageIO.read(Main.main.getResource("items.png"));
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-    }
+    @SneakyThrows
+    public static BufferedImage getIcon(MaterialTexture.Texture materialTexture) {
+        if (atlas == null)
+            atlas = ImageIO.read(materialTexture.getAtlasFile());
 
-
-    public static BufferedImage getIcon(MaterialTexture materialTexture) throws IOException {
         return atlas.getSubimage(materialTexture.getStartX(), materialTexture.getStartY(), 16, 16);
     }
 

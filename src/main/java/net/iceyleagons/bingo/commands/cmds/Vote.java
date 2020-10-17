@@ -16,8 +16,9 @@ public class Vote {
     public static CommandManager.CommandFinished onCommand(CommandSender sender, Object[] args) {
         Player player = (Player) sender;
         if (GameManager.isInGame(player)) {
-            GameManager.getGame(player).getVote().open(player);
+            GameManager.getGame(player).getVoting().open(player);
         }
+
         return CommandManager.CommandFinished.DONE;
     }
 

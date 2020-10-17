@@ -3,6 +3,7 @@ package net.iceyleagons.bingo.map;
 import lombok.SneakyThrows;
 import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.texture.MaterialTexture;
+import net.iceyleagons.bingo.texture.MaterialTexture.Texture;
 import org.bukkit.Material;
 
 import javax.imageio.ImageIO;
@@ -21,14 +22,14 @@ import java.util.stream.Collectors;
 public class MapImage {
 
 
-    private Map<MaterialTexture, Material> matrixMap;
-    private Map<MaterialTexture, Integer[]> textureMap;
-    private Map<Material, MaterialTexture> matrixSwapped;
+    private Map<Texture, Material> matrixMap;
+    private Map<Texture, Integer[]> textureMap;
+    private Map<Material, Texture> matrixSwapped;
     public static BufferedImage checkMark = null;
     public static Font minecraftFont = null;
 
     @SneakyThrows
-    public MapImage(Map<MaterialTexture, Material> matrixMap) {
+    public MapImage(Map<Texture, Material> matrixMap) {
         this.matrixMap = matrixMap;
         textureMap = new HashMap<>();
         if (minecraftFont == null) {
@@ -42,7 +43,7 @@ public class MapImage {
     }
 
     @SneakyThrows
-    public void update(Map<MaterialTexture, Material> matrixMap) {
+    public void update(Map<Texture, Material> matrixMap) {
         this.matrixMap = matrixMap;
         this.matrixSwapped = matrixMap.entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
         init();
@@ -59,18 +60,18 @@ public class MapImage {
         return background;
     }
 
-    public Map<MaterialTexture, Material> getItems() {
+    public Map<Texture, Material> getItems() {
         return matrixMap;
     }
 
     private BufferedImage[][] matrix = new BufferedImage[GRID_SIZE][GRID_SIZE];
 
 
-    public Integer[] getPosition(MaterialTexture materialTexture) {
+    public Integer[] getPosition(Texture materialTexture) {
         return textureMap.get(materialTexture);
     }
 
-    public MaterialTexture getMaterialTexture(Material material) {
+    public Texture getMaterialTexture(Material material) {
         return matrixSwapped.get(material);
     }
 
@@ -90,12 +91,12 @@ public class MapImage {
 
     @SneakyThrows
     public void init() {
-        MaterialTexture[] text = matrixMap.keySet().toArray(new MaterialTexture[25]);
+        Texture[] text = matrixMap.keySet().toArray(new Texture[25]);
         int m = 0;
         for (int i = 0; i < GRID_SIZE; i++) {
             for (int j = 0; j < GRID_SIZE; j++) {
                 checkMatrix[i][j] = false;
-                MaterialTexture materialTexture = text[m];
+                Texture materialTexture = text[m];
                 this.textureMap.put(materialTexture, new Integer[]{i, j});
                 matrix[i][j] = ItemIcon.getIcon(materialTexture);
                 m++;

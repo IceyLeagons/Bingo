@@ -1,0 +1,7645 @@
+{
+  "atlas_file": "default.png",
+  "blocks": [
+    {
+      "AIR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STONE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GRANITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "POLISHED_GRANITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "DIORITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "POLISHED_DIORITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "ANDESITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "POLISHED_ANDESITE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SNOWY_GRASS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GRASS_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TOPSIDE_GRASS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DIRT": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "COARSED_DIRT": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PODZOL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TOPSIDE_PODZOL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COBBLESTONE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "OAK_PLANKS": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "SPRUCE_PLANKS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_PLANKS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_PLANKS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_PLANKS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_PLANKS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_SAPLING": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SPRUCE_SAPLING": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_SAPLING": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_SAPLING": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_SAPLING": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_SAPLING": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BEDROCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FLOWING_WATER": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FLOWING_WATER2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FLOWING_LAVA": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FLOWING_LAVA2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SAND": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "RED_SAND": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAVEL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "GOLD_ORE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_ORE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COAL_ORE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_LOG": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "I": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "G": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_LOG": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "N": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUNGLE_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "O": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "E": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_OAK_LOG": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "D": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_SPRUCE_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_BIRCH_LOG": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "IGN": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_JUNGLE_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IGNO": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_ACACIA_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IGNOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRIPPED_DARK_OAK_LOG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IGNORE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_LEAVES": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SPRUCE_LEAVES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_LEAVES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUNGLE_LEAVES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_LEAVES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_LEAVES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPONGE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WET_SPONGE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GLASS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "LAPIS_LAZULI_ORE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LAPIS_LAZULI_BLOCK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "DISPENSER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DISPENSER_FACING_UP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DISPENSER_SIDE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DISPENSER_BACK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SANDSTONE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SMOOTH_SANDSTONE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SANDSTONE_DOWN": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHISELED_SANDSTONE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CUT_SANDSTONE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "NOTEBLOCK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "B1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B49": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B50": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B51": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B52": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B53": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B54": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B55": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B56": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B67": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B58": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B59": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B60": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B61": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B62": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B63": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "B64": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "POWERED_RAIL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "R4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DETECTOR_RAIL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "P1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STICKY_PISTON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COBWEB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GRASS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "FERN": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "DEAD_BUSH": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SEA_GRASS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "G1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "G2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PISTON": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "P28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "P29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WHITE_WOOL": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "ORANGE_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MAGENTA_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_BLUE_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "YELLOW_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIME_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_WOOL": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_GRAY_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CYAN_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PURPLE_WOOL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLUE_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BROWN_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GREEN_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RED_WOOL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLACK_WOOL": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "DANDELION": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "ROSE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "BLUE_ORCHID": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ALLIUM": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "AZURE_BLUET": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RED_TULIP": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ORANGE_TULIP": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "WHITE_TULIP": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_TULIP": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RANDOM_FLOWER": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BROWN_MUSHROOM": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "RED_MUSHROOM": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GOLD_BLOCK": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "IRON_BLOCK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BRICKS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "TNT": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "T1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "T2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BOOKSHELF": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MOSS_COBBLESTONE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "OBSIDIAN": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "T3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FIRE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FIRE2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MOB_SPAWNER": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_STAIRS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "S1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "S2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "S3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHEST": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "C1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "C2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "C3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "C4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "C5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RE6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "R48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DIAMOND_ORE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DIAMOND_BLOCK": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "WORKBENCH": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "CRAFTING_TABLE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "C6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CR8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FURNACE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "S4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "D1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "D2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "LADDER": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "RA1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RAIL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RA2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RA3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RA4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RA5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COBBLESTONE_STAIRS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "S5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "S6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "S7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WALL_SIGN": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "LEVER": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "STONE_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "D3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "D4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUNGLE_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REDSTONE_ORE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "T4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "T5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STONE_BUTTON": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SN1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SN8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ICE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "CACTUS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CA": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAC": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CLAY_BLOCK": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SUGARCANE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUKEBOX": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "JUKE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "F": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PUMPKIN": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "P": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NETHERRACK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SOUL_SAND": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GLOWSTONE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PORTAL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CARVED_PUMPKIN": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "JACK_O_LANTERN": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CAK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAKE_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CACK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAK13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A49": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A50": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A51": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A52": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A53": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A54": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A55": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A56": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A57": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A58": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A59": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A60": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A61": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A62": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A63": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A64": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A65": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A66": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A67": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A68": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A69": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A70": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A71": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A72": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A73": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A74": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A75": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A76": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A77": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A78": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A79": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A80": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A81": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A82": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A83": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A84": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A85": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A86": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A87": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A88": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A89": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A90": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A91": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A92": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A93": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A94": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A95": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "A96": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WHITE_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "ORANGE_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "MAGENTA_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_BLUE_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "YELLOW_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIME_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PINK_STAINED_GLASS": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_GRAY_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "CYAN_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PURPLE_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLUE_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BROWN_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "GREEN_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RED_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLACK_STAINED_GLASS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "OAK_TRAPDOOR": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "TRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_TRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_TRAPDOOR": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BTRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUNGLE_TRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JTRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_TRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ATRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_TRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DOTRAPDOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "INFS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "INFC": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STONE_BRICK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MOSSY_STONE_BRICK": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "CRACKED_STONE_BRICK": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "CHISELED_STONE_BRICK": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "INFB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "INFMB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "INFCB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "INFCHB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "M1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "M2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "M3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "M4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IRON_BARS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GLASS_PANE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MELON_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MB18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "VINE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "OAK_FENCE_GATE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BRICK_STAIRS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STONE_BRICK_STAIRS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SB1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SB2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SB3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MYCELIUM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MYCEL_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "LILYPAD": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "NETHER_BRICK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "NETHER_BRICK_FENCE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "NETHER_BRICK_STAIRS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "NB1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NB2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NB3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NW1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NETHER_WART": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "NW2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENCH_BOTTOM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENCHANTMENT_TABLE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "ENCH_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENCH_TOP_BOOK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENCH_BOOK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENCH_BOOK_BOTTOM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BREWING_STAND": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAULDRON": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CA1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CA2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CA3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NOTHINGNESS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END_STONE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DRAGON_EGG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REDSTONE_LAMP_LIT": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REDSTONE_LAMP": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CO1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CO2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CO3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CO4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CO5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CO6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SANDSTONE_STAIRS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EMERALD_ORE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENDER_CHEST": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TW1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TW2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TW3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TW4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TW5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TRIPWIRE_HOOK": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "ST1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ST2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ST3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EMERALD_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_STAIRS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_STAIRS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BHS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BHS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BHS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JUNGLE_STAIRS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "JS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "JS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BEACON_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BEACON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BEACON_BOTTOM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COBBLESTONE_WALL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MOSSY_COBBLESTONE_WALL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FLOWER_POT": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "FLOWER_POT_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CRO8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_BUTTON": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SPRUCE_BUTTON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_BUTTON": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_BUTTON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_BUTTON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_BUTTON": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SKELETON_SKULL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WITHER_SKELETON_SKULL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ZOMBIE_SKULL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PLAYER_SKULL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CREEPER_SKULL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ENDER_DRAGON_HEAD": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ANVIL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "ANVIL_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ANVIL_TOP_SLIGHTLY_BROKEN": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ANVIL_TOP_BROKEN": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TRAPPED_CHEST": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DT1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DT2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GOLD_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IRON_PRESSURE_PLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMPARATOR_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMP23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DAYLIGHT_SENSOR_INVERTED": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DAYLIGHT_SENSOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DAYLIGHT_BOTTOM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DAYLIGHT_SIDE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REDSTONE_BLOCK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "NETHER_QUARTZ_ORE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HOPPER": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "HOPPER_SIDE1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HOPPER_SIDE2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HOPPER_SIDE3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HOPPER_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QUARTZ_STAIRS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "QS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "AR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACTIVATOR_RAIL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "AR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "AR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DROPPER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DROPPER_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DROPPER_SIDE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DROPPER_BOTTOM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WHITE_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ORANGE_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MAGENTA_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_BLUE_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "YELLOW_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIME_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_TERRACOTTA": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_GRAY_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CYAN_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PURPLE_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLUE_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BROWN_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GREEN_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RED_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLACK_TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "WHITE_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ORANGE_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MAGENTA_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_BLUE_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "YELLOW_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIME_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_STAINED_GLASS_PANE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_GRAY_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CYAN_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PURPLE_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLUE_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BROWN_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GREEN_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RED_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLACK_STAINED_GLASS_PANE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ACACIA_STAIRS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "AS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "AS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "AS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_STAIRS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DOS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DOS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DOS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SLIME_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BARRIER": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IRON_TRAPDOOR": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PRISMARINE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PR21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HAY_BALE_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "HAY_BALE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "HAY_BALE_SIDE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CAR16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TERRACOTTA": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "COAL_BLOCK": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PACKED_ICE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SUNFLOWER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "SF1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SF14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "b32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RED_SANDSTONE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RS4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RED_SANDSTONE_STAIRS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RSS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RSS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RSS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SL34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_FENCE_GATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_FENCE_GATE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_FENCE_GATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_FENCE_GATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_FENCE_GATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SPRUCE_FENCE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_FENCE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_FENCE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_FENCE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_FENCE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DO10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EROD": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EROD1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EROD2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EROD3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "END_ROD": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "EROD4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHORUS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHORUS_FRUIT": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHORUS_PART": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PURPUR_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "PP8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BR4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GRASS_PATH": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GRASS_PATH_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "VOID": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CMD30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FROST_WALKER_ICE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FWI": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FWI1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FWI2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MAGMA_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "NETHER_WART_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IDKWHATTHISIS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BONE_BLOCK": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "BB1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BB2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE_VOID": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OBSERVER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "OBS1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OBS2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OBS3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OBS4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OBS5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH49": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH50": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH51": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH52": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH53": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH54": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH55": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH56": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH57": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH58": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH59": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH60": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH61": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH62": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH63": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH64": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH65": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH66": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH67": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH68": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH69": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH70": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH71": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH72": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH73": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH74": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH75": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH76": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH77": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH78": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH79": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH80": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH81": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH82": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH83": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH84": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH85": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH86": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH87": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH88": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH89": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH90": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH91": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH92": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH93": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH94": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH95": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH96": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH97": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH98": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH99": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH100": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH101": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SH102": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL49": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL50": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL51": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL52": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL53": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL54": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL55": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL56": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL57": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL58": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL59": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL60": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL61": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL62": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL63": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GL64": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WHITE_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "ORANGE_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "MAGENTA_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_BLUE_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "YELLOW_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIME_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PINK_CONCRETE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_GRAY_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "CYAN_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PURPLE_CONCRETE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLUE_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BROWN_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "GREEN_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RED_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLACK_CONCRETE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "WHITE_CONCRETE_POWDER": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ORANGE_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "MAGENTA_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_BLUE_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "YELLOW_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIME_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PINK_CONCRETE_POWDER": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LIGHT_GRAY_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "CYAN_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PURPLE_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLUE_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BROWN_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "GREEN_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RED_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLACK_CONCRETE_POWDER": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "KELP_HEAD": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "KELP_BODY": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DRIED_KELP_SIDE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DRIED_KELP_TOP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DRIED_KELP_BLOCK": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TE12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COR42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "STRUCTURE6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "WTF10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SEA_PICKLE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "HOPPER_ITEM": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TURTLE_EGG": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IRON_DOOR": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "OAK_DOOR": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "SPRUCE_DOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BIRCH_DOOR": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "JUNGLE_DOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ACACIA_DOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "DARK_OAK_DOOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REPEATER": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMPARATOR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "TURTLE_HELMET": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "SCUTE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "IRON_SHOVEL": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_PICKAXE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_AXE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "FLINT_AND_STEEL": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "APPLE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BOW": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BOW_CHARGED": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BOW_CHARGED1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BOW_CHARGED2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "ARROW": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COAL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "CHARCOAL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "DIAMOND": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_INGOT": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GOLD_INGOT": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_SWORD": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "WOODEN_SWORD": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "WOODEN_SHOVEL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "WOODEN_PICKAXE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "WOODEN_AXE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "STONE_SWORD": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "STONE_SHOVEL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "STONE_PICKAXE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "STONE_AXE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "DIAMOND_SWORD": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DIAMOND_SHOVEL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DIAMOND_PICKAXE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DIAMOND_AXE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "STICK": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "BOWL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "MUSHROOM_SOUP": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GOLD_SWORD": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GOLD_SHOVEL": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GOLD_PICKAXE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GOLD_AXE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "STRING": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "FEATHER": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "GUNPOWDER": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "WOODEN_HOE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "STONE_HOE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "IRON_HOE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "DIAMOND_HOE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GOLD_HOE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "WHEAT_SEED": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "WHEAT": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BREAD": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LEATHER_HELMET": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LEATHER_CHESTPLATE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LEATHER_LEGGINGS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LEATHER_SHOES": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CHAINMAIL_HELMET": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHAINMAIL_CHESTPLATE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHAINMAIL_LEGGINGS": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHAINMAIL_SHOES": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "IRON_HELMET": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "IRON_CHESTPLATE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_LEGGINGS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "IRON_SHOES": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "DIAMOND_HELMET": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "DIAMOND_CHESTPLATE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "DIAMOND_LEGGINGS": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "DIAMOND_SHOES": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GOLD_HELMET": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GOLD_CHESTPLATE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GOLD_LEGGINGS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GOLD_SHOES": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "FLINT": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "RAW_PORKCHOP": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COOKED_PORKCHOP": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "PAINTING": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "GOLDEN_APPLE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ENCHANTED_GOLDEN_APPLE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "OAK_SIGN": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BUCKET": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "WATER_BUCKET": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "LAVA_BUCKET": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "MINECART": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "SADDLE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "REDSTONE_DUST": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SNOWBALL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "OAK_BOAT": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "LEATHER": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "MILK_BUCKET": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "FB1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FB2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FB3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FB4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "BRICK": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "CLAY_BALL": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "SUGAR_CANE": {
+        "difficulty": "FREE"
+      }
+    },
+    {
+      "KELP": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "PAPER": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BOOK": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SLIME_BALL": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CHEST_MINECART": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "FURNACE_MINECART": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "EGG": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "c1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "COMPASS": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "c8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "c31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "FISHING_ROD": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "FISHING_ROD_NO_FISH": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL1": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL4": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL5": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL6": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL7": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL8": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL9": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL10": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL11": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL12": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL13": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL14": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL15": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL16": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL17": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL18": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL19": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL20": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL21": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL22": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL23": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL24": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL25": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL26": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL27": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL28": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL29": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL30": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL31": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL32": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL33": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL34": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL35": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL36": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL37": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL38": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL39": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL40": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL41": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL42": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL43": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL44": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL45": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL46": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL47": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL48": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL49": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL50": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL51": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL52": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL53": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL54": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL55": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL56": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL57": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL58": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL59": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL60": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL61": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL62": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL63": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "CL64": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GLOWSTONE_DUST": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "RAW_COD": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SALMON": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "CLOWNFISH": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PUFFERFISH": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "COOKED_COD": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COOKED_SALMON": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "INK_SACK": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "RED_DYE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "GREEN_DYE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COCOA_BEANS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "LAPIS_LAZULI": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PURPLE_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CYAN_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_GRAY_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GRAY_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_DYE": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "LIME_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "YELLOW_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_BLUE_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MAGENTA_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "ORANGE_DYE": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BONE_MEAL": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "BONE": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "SUGAR": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "CAKE": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "WHITE_BED": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "ORANGE_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "MAGENTA_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_BLUE_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "YELLOW_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIME_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PINK_BED": {
+        "difficulty": "EXPERT"
+      }
+    },
+    {
+      "GRAY_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "LIGHT_GRAY_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "CYAN_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "PURPLE_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLUE_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BROWN_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "GREEN_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "RED_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "BLACK_BED": {
+        "difficulty": "MEDIUM"
+      }
+    },
+    {
+      "COOKIE": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MAP": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MAP2": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "MAP3": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "SHEARS": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "MELON": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "DRIED_KELP": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "MELON_SEEDS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "PUMPKIN_SEEDS": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "RAW_BEEF": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COOKED_BEEF": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "RAW_CHICKEN": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "COOKED_CHICKEN": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "ROTTEN_FLESH": {
+        "difficulty": "EASY"
+      }
+    },
+    {
+      "ENDERPEARL": {
+        "difficulty": "HARD"
+      }
+    },
+    {
+      "BLAZE_ROD": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GHAST_TEAR": {
+        "difficulty": "UNOBTAINABLE"
+      }
+    },
+    {
+      "GOLD_NUGGET": {
+        "difficulty": "MEDIUM"
+      }
+    }
+  ]
+}

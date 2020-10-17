@@ -41,16 +41,22 @@ public class GameManager {
     }
 
 
-    public static Game createGame() {
-        return new Game(new Random().nextInt(), 2, 2, 2, true);
+    public static Game createGame(int maxPlayer, int amountOfTeams, int startingAt, boolean allowVoting) {
+
+        return new Game(new Random().nextInt(), maxPlayer, startingAt, amountOfTeams, allowVoting);
     }
 
-    public static void joinGame(Player player, Game game) {
+    public static void joinGame(Player player, Game game, boolean randomTeam, Team choosenTeam) {
         if (game.getGameState() != GameState.WAITING) {
             player.sendMessage("The game you were trying to join has already started!");
             return;
         }
+        if (game.isFull()) {
+            player.sendMessage("Game is full!");
+            return;
+        }
 
+        /*
         if (PartyProvider.isEnabled()) {
             List<UUID> players = PartyProvider.getParty(player).getMembers();
             players.forEach(partyMember -> {
@@ -60,12 +66,33 @@ public class GameManager {
                 }
             });
         }
+         */
+
 
         BingoPlayer bingoPlayer = getBingoPlayer(player);
         bingoPlayer.savePlayerStats();
         bingoPlayer.setGame(game);
-        setTeam(player, game.getTeams().get(1));
+
+        if (randomTeam) {
+            Team team = chooseRandomTeam(game, player);
+            setTeam(player, team);
+        } else
+            setTeam(player, choosenTeam);
         game.addPlayer(bingoPlayer);
+    }
+
+    static int placeInto = 0;
+
+    private static Team chooseRandomTeam(Game game, Player player) {
+        Team team = game.getTeams().get(placeInto);
+
+        placeInto++;
+        if (placeInto >= game.getAmountOfTeams())
+            placeInto = 0;
+        if (team == null) return chooseRandomTeam(game, player);
+        if (team.isFull()) return chooseRandomTeam(game, player);
+
+        return team;
     }
 
     public static void leaveGame(Player player) {

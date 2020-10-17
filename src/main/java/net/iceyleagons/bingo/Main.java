@@ -7,12 +7,14 @@ import net.iceyleagons.bingo.apis.PlaceholderProvider;
 import net.iceyleagons.bingo.apis.WorldGenerator;
 import net.iceyleagons.bingo.bungee.BungeeMessenger;
 import net.iceyleagons.bingo.commands.CommandManager;
+import net.iceyleagons.bingo.commands.cmds.CreateGame;
 import net.iceyleagons.bingo.commands.cmds.Join;
 import net.iceyleagons.bingo.commands.cmds.SaveStructure;
 import net.iceyleagons.bingo.commands.cmds.Vote;
 import net.iceyleagons.bingo.config.MainConfig;
 import net.iceyleagons.bingo.game.*;
 import net.iceyleagons.bingo.listeners.BukkitListeners;
+import net.iceyleagons.bingo.texture.MaterialTexture;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -30,20 +32,23 @@ public class Main extends JavaPlugin implements CommandExecutor {
     public static BungeeMessenger bungeeMessenger;
     public static MainConfig mainConfig;
 
-
     @Override
     public void onEnable() {
         main = this;
+        new MaterialTexture();
         Bukkit.getPluginManager().registerEvents(new WorldGenerator(), this);
+
         CommandManager commandManager = new CommandManager(this, "Bingo", "bingo.node", "bingo", "b");
+        setupCommands(commandManager);
+
         BukkitListeners.register(this);
         ScoreboardLib.setPluginInstance(this);
         bungeeMessenger = new BungeeMessenger(this);
-        mainConfig = new MainConfig(this);
+        //mainConfig = new MainConfig(this);
 
         GameManager.loadPlayersFromDatabase();
 
-        testGame = GameManager.createGame();
+        testGame = GameManager.createGame(50,10,2,true);
 
         PartyProvider.initIfPresent();
         PlaceholderProvider.registerPlaceholdersIfPluginPresent();
@@ -51,6 +56,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
     }
 
     private void setupCommands(CommandManager commandManager) {
+        commandManager.loadCommandClass(CreateGame.class);
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
         commandManager.loadCommandClass(SaveStructure.class);

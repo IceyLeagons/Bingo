@@ -1,6 +1,5 @@
 package net.iceyleagons.bingo.game;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import net.iceyleagons.bingo.Main;
@@ -9,14 +8,11 @@ import net.iceyleagons.bingo.game.enums.GameMode;
 import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.enums.GameTime;
 import net.iceyleagons.bingo.game.teams.Team;
-import net.iceyleagons.bingo.game.voting.Vote;
-import net.iceyleagons.bingo.game.voting.VoteMenu;
-import net.iceyleagons.bingo.map.MapImage;
 import net.iceyleagons.bingo.texture.MaterialTexture;
-import net.iceyleagons.frostedpanel.FrostedPanel;
+import net.iceyleagons.bingo.utils.voting.Voting;
+import net.iceyleagons.bingo.utils.voting.VotingMenu;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
-import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -42,7 +38,7 @@ public class Game {
     private final int amountOfTeams;
     @Getter
     @Setter
-    private Map<MaterialTexture, Material> items;
+    private Map<MaterialTexture.Texture, Material> items;
     @Getter
     private final Map<Integer, Team> teams;
     @Getter
@@ -75,6 +71,14 @@ public class Game {
     @Setter
     private boolean pvp = false;
 
+    public int getPlayerNumber() {
+        return games.size();
+    }
+
+    public boolean isFull() {
+        return getPlayerNumber() == getMaxPlayers();
+    }
+
     public Game(int id, int maxPlayers, int startAt, int amountOfTeams, boolean allowVoting) {
         if ((maxPlayers % amountOfTeams) != 0)
             throw new IllegalArgumentException("The remainder of maxPlayers divided by amountOfTeams should be 0!");
@@ -98,7 +102,7 @@ public class Game {
         this.teams = Team.allocateTeamsForGame(this);
         GameUtils.allocateTeamLocations(this, 512);
         setupVoting();
-        getVote().setClosed(!allowVoting);
+        getVoting().setVotingAllowed(allowVoting);
         games.put(id, this);
     }
 
@@ -106,10 +110,6 @@ public class Game {
         world.setGameRule(GameRule.KEEP_INVENTORY, getGameMode().isKeepInventory());
 
         switch (getGameTime()) {
-            case DAY:
-                world.setTime(1000);
-                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
-                break;
             case NIGHT:
                 world.setTime(16000);
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
@@ -122,6 +122,7 @@ public class Game {
                 world.setTime(1000);
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
                 break;
+            case DAY:
             default:
                 world.setTime(1000);
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
@@ -132,53 +133,100 @@ public class Game {
 
     @Getter
     @Setter
-    private Vote vote;
+    private Voting voting;
 
     public void setupVoting() {
-        vote = new Vote();
+        voting = new Voting("Choose options", 27, Main.main);
 
-        VoteMenu dayTime = new VoteMenu(Material.ORANGE_TERRACOTTA, "GameTime", Collections.singletonList("asd"));
-        dayTime.addVoteOption(Material.YELLOW_TERRACOTTA, "Day", Collections.singletonList("asd"), 1, 0);
-        dayTime.addVoteOption(Material.BLACK_TERRACOTTA, "Night", Collections.singletonList("asd"), 2, 1);
-        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA, "Sunset", Collections.singletonList("asd"), 3, 2);
-        dayTime.addVoteOption(Material.CLOCK, "NoFixed", Collections.singletonList("asd"), 4, 3);
+        VotingMenu dayTime = new VotingMenu("Choose game time", 27, Main.main);
+        dayTime.addVoteOption(Material.YELLOW_TERRACOTTA, 10, "dt_day", "Day");
+        dayTime.addVoteOption(Material.BLACK_TERRACOTTA, 12, "dt_night", "Night");
+        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA, 14, "dt_sunset", "Sunset");
+        dayTime.addVoteOption(Material.WHITE_TERRACOTTA, 16, "dt_nofixed", "NoFixed");
+        voting.addSubMenu(Material.CLOCK, 10, dayTime, "Game Time");
 
-        VoteMenu boardMode = new VoteMenu(Material.PAPER, "Board", Collections.singletonList("asd"));
-        boardMode.addVoteOption(Material.STONE_BRICK_SLAB, "Line", Collections.singletonList("asd"), 1, 0);
-        boardMode.addVoteOption(Material.STONE_BRICK_WALL, "Fullhouse", Collections.singletonList("asd"), 2, 1);
-        boardMode.addVoteOption(Material.WHEAT_SEEDS, "Spread", Collections.singletonList("asd"), 3, 2);
-        boardMode.addVoteOption(Material.STICK, "Diagonal", Collections.singletonList("asd"), 4, 3);
+        VotingMenu boardMode = new VotingMenu("Choose a board mode", 27, Main.main);
+        boardMode.addVoteOption(Material.LEVER, 10, "bm_line", "Line");
+        boardMode.addVoteOption(Material.PAINTING, 12, "bm_fullh", "Fullhouse");
+        boardMode.addVoteOption(Material.COBWEB, 14, "bm_spread", "Spread");
+        boardMode.addVoteOption(Material.STICK, 16, "bm_diag", "Diagonal");
+        voting.addSubMenu(Material.PAPER, 13, boardMode, "Board Mode");
 
-        VoteMenu gameMode = new VoteMenu(Material.BOOK, "GameMode", Collections.singletonList("asd"));
-        gameMode.addVoteOption(Material.OAK_SAPLING, "Amateur", Collections.singletonList("asd"), 1, 0);
-        gameMode.addVoteOption(Material.STONE_SWORD, "Normal", Collections.singletonList("asd"), 2, 1);
-        gameMode.addVoteOption(Material.DIAMOND_SWORD, "Insanity", Collections.singletonList("asd"), 3, 2);
-
-        vote.addMenu(dayTime, 0, 1);
-        vote.addMenu(boardMode, 1, 2);
-        vote.addMenu(gameMode, 2, 3);
-        vote.setClosed(false);
+        VotingMenu gameMode = new VotingMenu("Choose a game mode", 27, Main.main);
+        gameMode.addVoteOption(Material.OAK_SAPLING, 10, "gm_amat", "Amateur");
+        gameMode.addVoteOption(Material.STONE_SWORD, 13, "gm_normal", "Normal");
+        gameMode.addVoteOption(Material.DIAMOND_SWORD, 16, "gm_insanity", "Insanity");
+        voting.addSubMenu(Material.BOOK, 16, gameMode, "Game Mode");
     }
 
+    private void setGameTimeWinner(String dayTimeWinner) {
+        if (dayTimeWinner != null)
+            switch (dayTimeWinner) {
+                case "dt_day":
+                    setGameTime(GameTime.DAY);
+                    break;
+                case "dt_night":
+                    setGameTime(GameTime.NIGHT);
+                    break;
+                case "dt_sunset":
+                    setGameTime(GameTime.SUNSET);
+                    break;
+                case "dt_nofixed":
+                default:
+                    setGameTime(GameTime.NO_FIXED_TIME);
+                    break;
+            }
+        else setGameTime(GameTime.NO_FIXED_TIME);
+    }
+
+    private void setBoardModeWinnder(String boardModeWinner) {
+        if (boardModeWinner != null)
+            switch (boardModeWinner) {
+                case "bm_fullh":
+                    setBoardMode(BoardMode.FULL_HOUSE);
+                    break;
+                case "bm_spread":
+                    setBoardMode(BoardMode.SPREAD);
+                    break;
+                case "bm_diag":
+                    setBoardMode(BoardMode.DIAGONAL);
+                    break;
+                case "bm_line":
+                default:
+                    setBoardMode(BoardMode.LINE);
+                    break;
+            }
+        else setBoardMode(BoardMode.LINE);
+    }
+
+    private void setGameModeWinner(String gameModeWinner) {
+        if (gameModeWinner != null)
+            switch (gameModeWinner) {
+                case "gm_amat":
+                    setGameMode(GameMode.AMATEUR);
+                    break;
+                case "gm_insanity":
+                    setGameMode(GameMode.INSANITY);
+                    break;
+                case "gm_normal":
+                default:
+                    setGameMode(GameMode.NORMAL);
+                    break;
+            }
+        else setGameMode(GameMode.NORMAL);
+    }
+
+
     public void updateModes() {
-        int dayTimeWinning = vote.getVoteMenu(0).getIdOfWinningOption();
-        int gameModeWinning = vote.getVoteMenu(2).getIdOfWinningOption();
-        int boardModeWinning = vote.getVoteMenu(1).getIdOfWinningOption();
+        String gameTimeWinner = voting.getWinningFrom("dt_day", "dt_night", "dt_sunset", "dt_nofixed");
+        String boardModeWinner = voting.getWinningFrom("bm_line", "bm_fullh", "bm_spread", "bm_diag");
+        String gameModeWinner = voting.getWinningFrom("gm_amat", "gm_normal", "gm_insanity");
 
-        if (dayTimeWinning == -1 || dayTimeWinning == 0) setGameTime(GameTime.DAY);
-        else if (dayTimeWinning == 1) setGameTime(GameTime.NIGHT);
-        else if (dayTimeWinning == 2) setGameTime(GameTime.SUNSET);
-        else if (dayTimeWinning == 3) setGameTime(GameTime.NO_FIXED_TIME);
+        world.setGameRule(GameRule.KEEP_INVENTORY, getGameMode().isKeepInventory());
 
-        if (gameModeWinning == -1 || gameModeWinning == 1) setGameMode(GameMode.NORMAL);
-        else if (gameModeWinning == 0) setGameMode(GameMode.AMATEUR);
-        else if (gameModeWinning == 2) setGameMode(GameMode.INSANITY);
-
-        if (boardModeWinning == -1 || boardModeWinning == 0) setBoardMode(BoardMode.LINE);
-        else if (boardModeWinning == 1) setBoardMode(BoardMode.FULL_HOUSE);
-        else if (boardModeWinning == 2) setBoardMode(BoardMode.SPREAD);
-        else if (boardModeWinning == 3) setBoardMode(BoardMode.DIAGONAL);
-
+        setGameTimeWinner(gameTimeWinner);
+        setBoardModeWinnder(boardModeWinner);
+        setGameModeWinner(gameModeWinner);
 
         this.items = MaterialTexture.random(getGameMode().getFree(), getGameMode().getEasy(), getGameMode().getMedium(), getGameMode().getHard(), getGameMode().getExpert());
         setTime();

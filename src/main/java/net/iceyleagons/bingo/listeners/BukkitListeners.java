@@ -120,27 +120,6 @@ public class BukkitListeners implements Listener {
     }
 
     @EventHandler
-    public void onSignInteract(PlayerInteractEvent event) {
-        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (event.getClickedBlock() instanceof Sign) {
-                Sign sign = (Sign) event.getClickedBlock();
-                if (sign.getLine(0).contains("[Bingo]")) {
-                    String maybeId = sign.getLine(1);
-                    if (GameUtils.isNumber(maybeId)) {
-                        int id = Integer.parseInt(maybeId);
-                        Game game = GameManager.getGameById(id);
-                        if (game != null) {
-                            if (game.getGameState() == GameState.WAITING || game.getGameState() == GameState.INTERMISSION) {
-                                GameManager.joinGame(event.getPlayer(), game);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @EventHandler
     public void onSignWritten(SignChangeEvent event) {
         if (Objects.equals(event.getLine(0), "[Bingo]")) {
             if (GameUtils.isNumber(event.getLine(1))) {
@@ -259,7 +238,8 @@ public class BukkitListeners implements Listener {
                         }.runTaskLater(Main.main, 10L);
                     }
                 } else {
-                    // Player dies for good.
+                    player.setAlive(false);
+                    player.getPlayer().setGameMode(GameMode.SPECTATOR);
                 }
     }
 
