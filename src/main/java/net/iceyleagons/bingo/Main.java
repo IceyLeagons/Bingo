@@ -7,10 +7,7 @@ import net.iceyleagons.bingo.apis.PlaceholderProvider;
 import net.iceyleagons.bingo.apis.WorldGenerator;
 import net.iceyleagons.bingo.bungee.BungeeMessenger;
 import net.iceyleagons.bingo.commands.CommandManager;
-import net.iceyleagons.bingo.commands.cmds.CreateGame;
-import net.iceyleagons.bingo.commands.cmds.Join;
-import net.iceyleagons.bingo.commands.cmds.SaveStructure;
-import net.iceyleagons.bingo.commands.cmds.Vote;
+import net.iceyleagons.bingo.commands.cmds.*;
 import net.iceyleagons.bingo.config.MainConfig;
 import net.iceyleagons.bingo.game.*;
 import net.iceyleagons.bingo.listeners.BukkitListeners;
@@ -59,6 +56,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
         commandManager.loadCommandClass(CreateGame.class);
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
+        commandManager.loadCommandClass(Start.class);
         commandManager.loadCommandClass(SaveStructure.class);
     }
 

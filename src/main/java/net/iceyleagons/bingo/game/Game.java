@@ -60,7 +60,7 @@ public class Game {
     @Setter
     private World nether;
     @Getter
-    private final int startAt;
+    private int startAt;
     @Getter
     @Setter
     private boolean votingEnabled = true;
@@ -359,6 +359,12 @@ public class Game {
     private BukkitTask lobbyCountdown;
     private int countdown = 40;
 
+    public boolean forceStartGame() {
+        if (!(players.size() >= 2)) return false; //At least two people are required even when forced start.
+        this.countdown = 5;
+        this.startAt = 2;
+        return true;
+    }
 
     private void updateCountdown() {
         if (startAt <= players.size()) {

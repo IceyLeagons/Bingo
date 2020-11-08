@@ -100,12 +100,29 @@ public class VotingMenu implements Listener {
         return itemStack;
     }
 
+    private ItemStack removeGlow(ItemStack itemStack, String id) {
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        assert itemMeta != null;
+        itemMeta.removeEnchant(Enchantment.ARROW_DAMAGE);
+        itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        if (itemMeta.getDisplayName().contains("Votes")) {
+            String name = itemMeta.getDisplayName();
+            String newname = name.replace(String.valueOf(voteMap.get(id)-1),String.valueOf(voteMap.get(id)));
+            itemMeta.setDisplayName(newname);
+        } else
+            itemMeta.setDisplayName(itemMeta.getDisplayName()+String.format(" %s Votes",voteMap.get(id)));
+        itemStack.setItemMeta(itemMeta);
+        return itemStack;
+    }
+
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         if (!event.getView().getTitle().equals(getTitle())) return;
         if (!(event.getWhoClicked() instanceof Player)) return;
 
         Player player = (Player) event.getWhoClicked();
+        ItemStack itemStack = event.getCurrentItem();
+        assert itemStack != null;
         player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_BUTTON_CLICK_ON, 1, 1);
         if (event.getSlot() == getSize()-1) {
             event.setCancelled(true);
@@ -118,11 +135,10 @@ public class VotingMenu implements Listener {
                 //if (!voteMap2.get(player).equals(id)) return;
                 String toRemove = voteMap2.get(player);
                 voteMap.put(toRemove,voteMap.get(toRemove)-1);
+                event.getInventory().setItem(event.getSlot(),removeGlow(itemStack,toRemove));
             }
             voteMap2.put(player,id);
             voteMap.put(id,voteMap.get(id)+1);
-            ItemStack itemStack = event.getCurrentItem();
-            assert itemStack != null;
             event.getInventory().setItem(event.getSlot(),addGlow(itemStack,id));
         }
         event.setCancelled(true);
