@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
  */
 public class Vote {
 
-    @CommandManager.Cmd(cmd = "vote")
+    @CommandManager.Cmd(cmd = "vote", enablePermCheck = false )
     public static CommandManager.CommandFinished onCommand(CommandSender sender, Object[] args) {
         Player player = (Player) sender;
         if (GameManager.isInGame(player)) {

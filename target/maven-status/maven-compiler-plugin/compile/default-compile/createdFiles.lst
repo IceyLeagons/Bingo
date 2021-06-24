@@ -42,6 +42,7 @@ net\iceyleagons\bingo\commands\cmds\Join$1.class
 me\tigerhix\lib\scoreboard\common\animate\ScrollableString.class
 net\iceyleagons\bingo\utils\festruct\elements\Data.class
 net\iceyleagons\bingo\utils\voting\VotingMenu.class
+net\iceyleagons\bingo\commands\cmds\Items.class
 net\iceyleagons\bingo\commands\cmds\Vote.class
 net\iceyleagons\bingo\game\GameUtils$Vector2.class
 net\iceyleagons\bingo\utils\festruct\FEStruct$2.class
@@ -90,6 +91,7 @@ me\tigerhix\lib\scoreboard\type\Scoreboard.class
 net\iceyleagons\freezer\FreezerType.class
 external\protocol_glowapi\listeners\PlayerJoinListener.class
 net\iceyleagons\bingo\utils\festruct\Cuboid.class
+net\iceyleagons\bingo\commands\cmds\Start.class
 net\iceyleagons\bingo\bungee\BingoMessageHandler.class
 net\iceyleagons\bingo\texture\MaterialTexture$Texture.class
 net\iceyleagons\bingo\utils\PacketUtils.class
@@ -98,6 +100,7 @@ net\iceyleagons\bingo\utils\festruct\Cuboid$1.class
 net\iceyleagons\bingo\utils\PacketUtils$LATENCY.class
 net\iceyleagons\bingo\listeners\BingoItemEvent.class
 me\tigerhix\lib\scoreboard\ScoreboardLib.class
+net\iceyleagons\bingo\commands\cmds\MapImages.class
 net\iceyleagons\bingo\game\GameUtils$1.class
 net\iceyleagons\frostedpanel\FrostedPanel$Step.class
 net\iceyleagons\bingo\utils\PacketUtils$TRANSLATIONS.class

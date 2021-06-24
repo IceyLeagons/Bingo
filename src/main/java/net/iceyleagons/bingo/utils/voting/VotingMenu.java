@@ -36,6 +36,9 @@ public class VotingMenu implements Listener {
     private Map<Integer,String > itemMap;
     private Map<String,Integer> itemMapReverse;
     private Map<Player,String> voteMap2;
+    private Map<Player,Integer> latest;
+    private Map<Player,Inventory> inventoryMap;
+    private boolean registered;
 
 
     private Voting parent;
@@ -47,8 +50,14 @@ public class VotingMenu implements Listener {
         this.itemMap = new HashMap<>();
         this.voteMap2 = new HashMap<>();
         this.itemMapReverse = new HashMap<>();
+        this.latest = new HashMap<>();
+        this.inventoryMap = new HashMap<>();
+
         inventory = Bukkit.createInventory(null,size,title);
-        Bukkit.getServer().getPluginManager().registerEvents(this, javaPlugin);
+        if (!registered) {
+            Bukkit.getServer().getPluginManager().registerEvents(this, javaPlugin);
+            registered = true;
+        }
     }
 
     public void addVoteOption(Material material, int slot, String id, String name) {
@@ -72,6 +81,7 @@ public class VotingMenu implements Listener {
 
     public void open(Player player) {
         Inventory inventory = Bukkit.createInventory(null,getSize(),getTitle());
+        inventoryMap.put(player,inventory);
         ItemStack back = ItemFactory.newFactory(Material.PAPER).hideAttributes().setDisplayName("§f§l< Back").build();
         inventory.setContents(getInventory().getContents());
         inventory.setItem(getSize()-1,back);
@@ -90,12 +100,6 @@ public class VotingMenu implements Listener {
         assert itemMeta != null;
         itemMeta.addEnchant(Enchantment.ARROW_DAMAGE,1,true);
         itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        if (itemMeta.getDisplayName().contains("Votes")) {
-            String name = itemMeta.getDisplayName();
-            String newname = name.replace(String.valueOf(voteMap.get(id)-1),String.valueOf(voteMap.get(id)));
-            itemMeta.setDisplayName(newname);
-        } else
-        itemMeta.setDisplayName(itemMeta.getDisplayName()+String.format(" %s Votes",voteMap.get(id)));
         itemStack.setItemMeta(itemMeta);
         return itemStack;
     }
@@ -105,12 +109,6 @@ public class VotingMenu implements Listener {
         assert itemMeta != null;
         itemMeta.removeEnchant(Enchantment.ARROW_DAMAGE);
         itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        if (itemMeta.getDisplayName().contains("Votes")) {
-            String name = itemMeta.getDisplayName();
-            String newname = name.replace(String.valueOf(voteMap.get(id)-1),String.valueOf(voteMap.get(id)));
-            itemMeta.setDisplayName(newname);
-        } else
-            itemMeta.setDisplayName(itemMeta.getDisplayName()+String.format(" %s Votes",voteMap.get(id)));
         itemStack.setItemMeta(itemMeta);
         return itemStack;
     }
@@ -123,6 +121,8 @@ public class VotingMenu implements Listener {
         Player player = (Player) event.getWhoClicked();
         ItemStack itemStack = event.getCurrentItem();
         assert itemStack != null;
+        if (itemStack.getType() == Material.AIR) return;
+
         player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_BUTTON_CLICK_ON, 1, 1);
         if (event.getSlot() == getSize()-1) {
             event.setCancelled(true);
@@ -135,10 +135,12 @@ public class VotingMenu implements Listener {
                 //if (!voteMap2.get(player).equals(id)) return;
                 String toRemove = voteMap2.get(player);
                 voteMap.put(toRemove,voteMap.get(toRemove)-1);
-                event.getInventory().setItem(event.getSlot(),removeGlow(itemStack,toRemove));
+                event.getInventory().setItem(latest.get(player),removeGlow(itemStack,toRemove));
             }
+
             voteMap2.put(player,id);
             voteMap.put(id,voteMap.get(id)+1);
+            latest.put(player,event.getSlot());
             event.getInventory().setItem(event.getSlot(),addGlow(itemStack,id));
         }
         event.setCancelled(true);

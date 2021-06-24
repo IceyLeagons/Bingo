@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
  * @author TOTHTOMI
  */
 public class Start {
-    @CommandManager.Cmd(cmd = "start")
+    @CommandManager.Cmd(cmd = "start", enablePermCheck = true )
     public static CommandManager.CommandFinished onCommand(CommandSender sender, Object[] args) {
         if (!sender.isOp()) return CommandManager.CommandFinished.PERMISSION;
 

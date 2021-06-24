@@ -45,7 +45,7 @@ public class Main extends JavaPlugin implements CommandExecutor {
 
         GameManager.loadPlayersFromDatabase();
 
-        testGame = GameManager.createGame(50,10,2,true);
+        testGame = GameManager.createGame(6,3,6,true); // 4 plr/team
 
         PartyProvider.initIfPresent();
         PlaceholderProvider.registerPlaceholdersIfPluginPresent();
@@ -56,8 +56,10 @@ public class Main extends JavaPlugin implements CommandExecutor {
         commandManager.loadCommandClass(CreateGame.class);
         commandManager.loadCommandClass(Join.class);
         commandManager.loadCommandClass(Vote.class);
+        commandManager.loadCommandClass(MapImages.class);
         commandManager.loadCommandClass(Start.class);
         commandManager.loadCommandClass(SaveStructure.class);
+        commandManager.loadCommandClass(Items.class);
     }
 
     @Override

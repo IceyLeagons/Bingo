@@ -22,7 +22,7 @@ public class SaveStructure {
                     CommandManager.Arg.ArgInteger.class, // 2nd y Corner
                     CommandManager.Arg.ArgInteger.class, // 2nd z corner
                     CommandManager.Arg.ArgString.class, // name
-            }, only = CommandManager.CommandOnly.PLAYER)
+            }, only = CommandManager.CommandOnly.PLAYER, enablePermCheck = true )
     public static CommandManager.CommandFinished onCommand(CommandSender sender, Object[] args) {
         Vector lowerCorner = new Vector((int) args[0], (int) args[1], (int) args[2]);
         Vector higherCorner = new Vector((int) args[3], (int) args[4], (int) args[5]);

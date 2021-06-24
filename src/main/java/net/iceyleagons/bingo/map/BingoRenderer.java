@@ -21,6 +21,8 @@ public class BingoRenderer extends MapRenderer {
 
     @SneakyThrows
     public BingoRenderer(MapImage mapImage) {
+        //System.out.println("BingoRenderer#newInstance(MapImage)");
+
         this.mapImage = mapImage;
         this.bingoImage = mapImage.create();
     }
@@ -29,9 +31,12 @@ public class BingoRenderer extends MapRenderer {
     public void update() {
         bingoImage = mapImage.create();
     }
+    
 
     @Override
     public void render(MapView mapView, MapCanvas mapCanvas, Player player) {
-        mapCanvas.drawImage(0,0,getBingoImage());
+        if (getBingoImage() == null) return;
+        mapCanvas.drawImage(0, 0, getBingoImage());
+        bingoImage = null;
     }
 }

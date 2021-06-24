@@ -12,10 +12,7 @@ import net.iceyleagons.bingo.game.teams.Team;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
-import org.bukkit.entity.Firework;
-import org.bukkit.entity.Horse;
-import org.bukkit.entity.Pig;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -24,12 +21,14 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.spigotmc.event.entity.EntityDismountEvent;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -88,10 +87,6 @@ public class BukkitListeners implements Listener {
         Player player = (Player) itemEvent.getWhoClicked();
         if (itemEvent.getCurrentItem() != null)
             if (GameManager.isInGame(player)) {
-                if (itemEvent.getCurrentItem().getType() == Material.MAP || itemEvent.getCurrentItem().getType() == Material.FILLED_MAP) {
-                    itemEvent.setCurrentItem(new ItemStack(Material.AIR));
-                    itemEvent.setCancelled(true);
-                }
             } else {
                 Game game = GameManager.getBingoPlayer(player).getGame();
                 if (game != null)
@@ -135,8 +130,8 @@ public class BukkitListeners implements Listener {
 
     @EventHandler
     public void onPlayerTriesToRemoveMap(PlayerSwapHandItemsEvent itemEvent) {
-        if (!GameManager.isInGame(itemEvent.getPlayer())) return;
-        itemEvent.setCancelled(true);
+        //if (!GameManager.isInGame(itemEvent.getPlayer())) return;
+        //itemEvent.setCancelled(true);
     }
 
     //For picking up items
@@ -243,12 +238,29 @@ public class BukkitListeners implements Listener {
                 }
     }
 
+    @EventHandler
+    public void onItemDrop(PlayerDropItemEvent event) {
+        if (event.getItemDrop().getItemStack().getType().equals(Material.END_CRYSTAL))
+            event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void clickHandler(PlayerInteractEvent event) {
+        if (event.getItem() != null)
+            if (event.getItem().getType() == Material.END_CRYSTAL) {
+                if (event.getPlayer().getOpenInventory().getType() == InventoryType.CHEST) return;
+
+                if (GameManager.isInGame(event.getPlayer()))
+                    GameManager.getGame(event.getPlayer()).getVoting().open(event.getPlayer());
+            }
+    }
+
     private void callEvent(Player player, ItemStack itemStack) {
         if (!GameManager.isInGame(player)) return;
         Team team = GameManager.getTeam(player);
         Game game = GameManager.getGame(player);
-        BingoItemEvent bingoItemEvent = new BingoItemEvent(itemStack, player, team, game);
-        Bukkit.getPluginManager().callEvent(bingoItemEvent);
+        if (team == null || itemStack == null || player == null) return;
+        team.checkItem(itemStack, player);
     }
 
 

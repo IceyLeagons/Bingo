@@ -105,6 +105,8 @@ public class MapImage {
     }
 
     public BufferedImage create() throws IOException {
+        System.out.println("Creating new map image");
+
         BasicStroke small = new BasicStroke(0.3f);
         BasicStroke big = new BasicStroke(2f);
 

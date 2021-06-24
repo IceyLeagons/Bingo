@@ -8,6 +8,7 @@ F:\Intellijprojects\Bingo\src\main\java\me\tigerhix\lib\scoreboard\common\animat
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\freezer\Freezer.java
 F:\Intellijprojects\Bingo\src\main\java\me\tigerhix\lib\scoreboard\common\Strings.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\utils\voting\VotingMenu.java
+F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\commands\cmds\MapImages.java
 F:\Intellijprojects\Bingo\src\main\java\external\protocol_glowapi\listeners\PlayerJoinListener.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\listeners\BingoItemEvent.java
 F:\Intellijprojects\Bingo\src\main\java\me\tigerhix\lib\scoreboard\common\animate\ScrollableString.java
@@ -31,6 +32,7 @@ F:\Intellijprojects\Bingo\src\main\java\external\protocol_glowapi\packetwrappers
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\game\GameUtils.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\listeners\BukkitListeners.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\game\enums\BoardMode.java
+F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\commands\cmds\Items.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\utils\PacketUtils.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\apis\WorldGeneratorProvider.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\utils\festruct\elements\Data.java
@@ -41,6 +43,7 @@ F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\game\BingoPlayer.j
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\utils\SubPerms.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\apis\WorldGenerator.java
 F:\Intellijprojects\Bingo\src\main\java\external\protocol_glowapi\listeners\PlayerQuitListener.java
+F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\commands\cmds\Start.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\game\Game.java
 F:\Intellijprojects\Bingo\src\main\java\me\tigerhix\lib\scoreboard\common\EntryBuilder.java
 F:\Intellijprojects\Bingo\src\main\java\net\iceyleagons\bingo\map\MapImage.java

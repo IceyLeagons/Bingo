@@ -9,11 +9,13 @@ import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.enums.GameTime;
 import net.iceyleagons.bingo.game.teams.Team;
 import net.iceyleagons.bingo.texture.MaterialTexture;
+import net.iceyleagons.bingo.utils.ItemFactory;
 import net.iceyleagons.bingo.utils.voting.Voting;
 import net.iceyleagons.bingo.utils.voting.VotingMenu;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -90,8 +92,6 @@ public class Game {
         setGameMode(GameMode.NORMAL);
         World[] worlds = WorldManager.allocateWorld(this);
         this.world = worlds[0];
-        //this.nether = worlds[1];
-        //GameUtils.pregenerate(world,-16,-16,16,16); // from -512, -512 to 512, 512
         this.items = MaterialTexture.random(getGameMode().getFree(), getGameMode().getEasy(), getGameMode().getMedium(), getGameMode().getHard(), getGameMode().getExpert());
         this.maxPlayers = maxPlayers;
         this.amountOfTeams = amountOfTeams;
@@ -112,20 +112,14 @@ public class Game {
         switch (getGameTime()) {
             case NIGHT:
                 world.setTime(16000);
-                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
                 break;
             case SUNSET:
                 world.setTime(12000);
-                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
                 break;
             case NO_FIXED_TIME:
-                world.setTime(1000);
-                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
-                break;
             case DAY:
             default:
                 world.setTime(1000);
-                world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
                 break;
         }
     }
@@ -138,18 +132,17 @@ public class Game {
     public void setupVoting() {
         voting = new Voting("Choose options", 27, Main.main);
 
-        VotingMenu dayTime = new VotingMenu("Choose game time", 27, Main.main);
+        VotingMenu dayTime = new VotingMenu("Choose starting time", 27, Main.main);
         dayTime.addVoteOption(Material.YELLOW_TERRACOTTA, 10, "dt_day", "Day");
-        dayTime.addVoteOption(Material.BLACK_TERRACOTTA, 12, "dt_night", "Night");
-        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA, 14, "dt_sunset", "Sunset");
-        dayTime.addVoteOption(Material.WHITE_TERRACOTTA, 16, "dt_nofixed", "NoFixed");
-        voting.addSubMenu(Material.CLOCK, 10, dayTime, "Game Time");
+        dayTime.addVoteOption(Material.BLACK_TERRACOTTA, 13, "dt_night", "Night");
+        dayTime.addVoteOption(Material.ORANGE_TERRACOTTA, 16, "dt_sunset", "Sunset");
+        voting.addSubMenu(Material.CLOCK, 10, dayTime, "Starting Time");
 
         VotingMenu boardMode = new VotingMenu("Choose a board mode", 27, Main.main);
-        boardMode.addVoteOption(Material.LEVER, 10, "bm_line", "Line");
-        boardMode.addVoteOption(Material.PAINTING, 12, "bm_fullh", "Fullhouse");
-        boardMode.addVoteOption(Material.COBWEB, 14, "bm_spread", "Spread");
-        boardMode.addVoteOption(Material.STICK, 16, "bm_diag", "Diagonal");
+        boardMode.addVoteOption(Material.LEVER, 11, "bm_line", "Line");
+        boardMode.addVoteOption(Material.PAINTING, 15, "bm_fullh", "Fullhouse");
+        // boardMode.addVoteOption(Material.COBWEB, 14, "bm_spread", "Spread");
+        //boardMode.addVoteOption(Material.STICK, 16, "bm_diag", "Diagonal");
         voting.addSubMenu(Material.PAPER, 13, boardMode, "Board Mode");
 
         VotingMenu gameMode = new VotingMenu("Choose a game mode", 27, Main.main);
@@ -162,6 +155,7 @@ public class Game {
     private void setGameTimeWinner(String dayTimeWinner) {
         if (dayTimeWinner != null)
             switch (dayTimeWinner) {
+                default:
                 case "dt_day":
                     setGameTime(GameTime.DAY);
                     break;
@@ -170,10 +164,6 @@ public class Game {
                     break;
                 case "dt_sunset":
                     setGameTime(GameTime.SUNSET);
-                    break;
-                case "dt_nofixed":
-                default:
-                    setGameTime(GameTime.NO_FIXED_TIME);
                     break;
             }
         else setGameTime(GameTime.NO_FIXED_TIME);
@@ -218,8 +208,8 @@ public class Game {
 
 
     public void updateModes() {
-        String gameTimeWinner = voting.getWinningFrom("dt_day", "dt_night", "dt_sunset", "dt_nofixed");
-        String boardModeWinner = voting.getWinningFrom("bm_line", "bm_fullh", "bm_spread", "bm_diag");
+        String gameTimeWinner = voting.getWinningFrom("dt_day", "dt_night", "dt_sunset");
+        String boardModeWinner = voting.getWinningFrom("bm_line", "bm_fullh"/*, "bm_spread", "bm_diag"*/);
         String gameModeWinner = voting.getWinningFrom("gm_amat", "gm_normal", "gm_insanity");
 
         world.setGameRule(GameRule.KEEP_INVENTORY, getGameMode().isKeepInventory());
@@ -301,6 +291,9 @@ public class Game {
             for (BingoPlayer player : getPlayers())
                 player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, getGameMode().getResistanceTime() * 20, 0, true, false));
 
+        for (BingoPlayer bingoPlayer : players)
+            bingoPlayer.getPlayer().getInventory().setItem(8, new ItemStack(Material.AIR));
+
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -319,6 +312,11 @@ public class Game {
             team.showSidebar();
             team.giveMapItem();
         });
+
+        for (BingoPlayer player : players) {
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 100, 4, false, false));
+            player.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 100, 4, false, false));
+        }
 
         AtomicInteger countdown = new AtomicInteger(15);
         intermission = Bukkit.getScheduler().runTaskTimer(Main.main, () -> {
@@ -360,9 +358,9 @@ public class Game {
     private int countdown = 40;
 
     public boolean forceStartGame() {
-        if (!(players.size() >= 2)) return false; //At least two people are required even when forced start.
+        this.startAt = players.size();
         this.countdown = 5;
-        this.startAt = 2;
+        updateCountdown();
         return true;
     }
 
@@ -370,6 +368,7 @@ public class Game {
         if (startAt <= players.size()) {
             if (lobbyCountdown == null) {
                 lobbyCountdown = Bukkit.getScheduler().runTaskTimer(Main.main, () -> {
+                    if (countdown > 39) broadcast("To vote type /bingo vote", Optional.empty());
                     if (countdown > 39 || countdown < 11)
                         broadcast(String.format("Game is starting in %d seconds...", countdown), Optional.empty());
                     if (countdown <= 0) {
@@ -379,13 +378,24 @@ public class Game {
                         broadcast(String.format("Selected mode &c%s", getGameMode().name()), Optional.empty());
                         broadcast(String.format("Selected time &c%s", getGameTime().name()), Optional.empty());
 
+                        players.forEach(bingoPlayer -> {
+                            bingoPlayer.getPlayer()
+                                    .sendTitle("§dTOTHTOMI §b& §dGábe §bpresents",
+                                            "§k: " + ChatColor.translateAlternateColorCodes('&', Main.prefix) + " §k:", 10, 6 * 20, 30);
+
+                            bingoPlayer.getPlayer().playSound(bingoPlayer.getLocation(), Sound.BLOCK_ANVIL_PLACE, 0.25f, 0.75f);
+                        });
+
                         startGame();
                     }
                     countdown--;
                 }, 0L, 20L);
             }
         } else {
-            if (lobbyCountdown != null) lobbyCountdown.cancel();
+            if (lobbyCountdown != null) {
+                lobbyCountdown.cancel();
+                lobbyCountdown = null;
+            }
         }
     }
 
@@ -396,10 +406,13 @@ public class Game {
         updateCountdown();
         //Lobby, choose teams etc
         bingoPlayer.resetPlayerStats();
+        bingoPlayer.getPlayer().getInventory().setItem(8, ItemFactory.newFactory(Material.END_CRYSTAL).setDisplayName("&cVoting").build());
     }
 
     public void removePlayer(BingoPlayer bingoPlayer) {
         if (getGameState() == GameState.RESETING) return; //Prevent concurrent modification exception
+        if (getGameState() == GameState.WAITING)
+            bingoPlayer.getPlayer().getInventory().setItem(8, new ItemStack(Material.AIR));
         broadcast(String.format("&8[&c-&8] &b%s has left the game.", bingoPlayer.getPlayer().getName()), Optional.empty());
         players.remove(bingoPlayer);
         updateCountdown();

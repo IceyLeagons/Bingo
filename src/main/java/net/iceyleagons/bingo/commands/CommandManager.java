@@ -55,7 +55,7 @@ public class CommandManager implements TabCompleter, CommandExecutor {
             help = "Toggle debug mode.",
             longhelp = "Toggle debug mode. Shows information on command usage.",
             only = CommandOnly.OP,
-            permission = "debug")
+            permission = "debug", enablePermCheck = true)
     public static CommandFinished cmdToggleDebugMode(CommandSender sender, Object[] args) {
         GLOBAL_DEBUG = (args.length != 0 ? (Boolean)args[0] : !GLOBAL_DEBUG);
         sender.sendMessage(ChatColor.YELLOW + "Debug mode is now: " + (GLOBAL_DEBUG ? ChatColor.GREEN + "ON" : ChatColor.RED + "OFF"));
@@ -269,6 +269,7 @@ public class CommandManager implements TabCompleter, CommandExecutor {
                         return CommandFinished.NOCONSOLE;
 
                     // Check for the "op" argument and permission argument
+                    if (bestFit.enablePermCheck())
                     if((bestFit.only() == CommandOnly.OP ? !sender.isOp() : false) ||
                             (bestFit.permission() != "" ? !sender.hasPermission(permissionScheme + "." + bestFit.permission()) : false))
                         return CommandFinished.PERMISSION;
@@ -410,6 +411,8 @@ public class CommandManager implements TabCompleter, CommandExecutor {
          * cmd = "sub1 sub2 sub3 sub4 sub5"
          */
         String cmd() default "";
+
+        boolean enablePermCheck();
 
         /**
          * The arguments for the command. Required arguments must be enclosed in <>'s

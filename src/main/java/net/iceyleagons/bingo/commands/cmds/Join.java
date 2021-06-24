@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  */
 public class Join {
 
-    @CommandManager.Cmd(cmd = "join")
+    @CommandManager.Cmd(cmd = "join", enablePermCheck = false)
     public static CommandManager.CommandFinished onCommand(CommandSender sender, Object[] args) {
         if (sender instanceof Player) {
             Collection<Game> games = Game.games.values().stream().parallel().sorted(Comparator.comparingInt(Game::getPlayerNumber)).collect(Collectors.toList());

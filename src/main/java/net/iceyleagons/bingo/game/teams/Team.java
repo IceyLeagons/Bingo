@@ -116,13 +116,12 @@ public class Team {
                 mapImage.setChecked(x, y, true);
                 bingoRenderer.update();
                 String tname = isUsingIntegerNames() ? "#" + teamName : teamName;
-                getGame().broadcast(String.format("&bThe &l%s &r&bteam has found an other item. Their progress is: &c%d items&b.",
+                getGame().broadcast(String.format("&bThe &l%s &r&b team has found an other item. Their progress is: &c%d items&b.",
                         getTeamColor() + tname, checkedItems), Optional.of(getPlayers()));
-                teamBroadcast(String.format("&c&l%s &bhas found an item: %s",player.getName(), PacketUtils.TRANSLATIONS.get(itemStack)));
+                teamBroadcast(String.format("&c&l%s &bhas found an item: %s", player.getName(), PacketUtils.TRANSLATIONS.get(itemStack)));
                 GameUtils.spawnFireworks(player.getLocation());
-                if (GameUtils.checkForWin(getMapImage().getCheckMatrix(), getGame().getBoardMode())) {
+                if (GameUtils.checkForWin(getMapImage().getCheckMatrix(), getGame().getBoardMode()))
                     getGame().declareWinner(this);
-                }
             }
 
         }
@@ -138,48 +137,12 @@ public class Team {
         getPlayers().forEach(player -> {
             Player p = player.getPlayer();
             Scoreboard scoreboard = ScoreboardLib.createScoreboard(p).setHandler(scoreboardHandler);
-            scoreboard.setUpdateInterval(60L);
+            scoreboard.setUpdateInterval(140L);
             scoreboard.activate();
             player.setScoreboard(scoreboard);
         });
     }
 
-    private String calculateDirection(Player originPlayer, Player endPlayer) {
-        Location origin = originPlayer.getLocation();
-        Vector target = endPlayer.getLocation().toVector();
-        origin.setDirection(target.subtract(origin.toVector()));
-        float oYaw = origin.getYaw() + 180;
-        float yaw = Math.round(oYaw / 45);
-
-        String west = "←";
-        String north_west = "↖";
-        String north = "↑";
-        String north_east = "↗";
-        String east = "→";
-        String south_east = "↘";
-        String south = "↓";
-        String south_west = "↙";
-
-        switch ((int) yaw) {
-            default:
-            case 1:
-                return west;
-            case 2:
-                return north_west;
-            case 3:
-                return north;
-            case 4:
-                return north_east;
-            case 5:
-                return east;
-            case 6:
-                return south_east;
-            case 7:
-                return south;
-            case 8:
-                return south_west;
-        }
-    }
 
     private void initScoreboard() {
         scoreboardHandler = new ScoreboardHandler() {
@@ -190,6 +153,8 @@ public class Team {
 
             @Override
             public List<Entry> getEntries(Player player) {
+                System.out.println("Updating #scoreboard");
+
                 EntryBuilder scoreboardText = new EntryBuilder();
                 scoreboardText.blank()
                         .next("&8Team: ")
@@ -245,7 +210,7 @@ public class Team {
     public static ChatColor[] colors = new ChatColor[]{ChatColor.AQUA, ChatColor.BLUE, ChatColor.DARK_AQUA, ChatColor.DARK_BLUE,
             ChatColor.DARK_GRAY, ChatColor.DARK_GREEN, ChatColor.DARK_PURPLE, ChatColor.DARK_RED, ChatColor.GOLD, ChatColor.GRAY, ChatColor.GREEN,
             ChatColor.LIGHT_PURPLE, ChatColor.RED, ChatColor.WHITE, ChatColor.YELLOW};
-    public static int maxAmountOfAllowedTeams = colors.length;
+    public static int maxAmountOfAllowedTeams = 50;
 
     public static Map<Integer, Team> allocateTeamsForGame(Game game) {
         int numOfTeams = game.getAmountOfTeams();
