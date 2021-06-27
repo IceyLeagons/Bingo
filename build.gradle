@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'net.iceyleagons'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {url = "https://jitpack.io"}
+    maven {url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"}
+    maven {url = "https://libraries.minecraft.net/"}
+    maven {url = "https://repo.inventivetalent.org/content/groups/public/"}
+    maven {url = "https://repo.dmulloy2.net/nexus/repository/public/"}
+    maven {
+        url = "https://repo.codemc.io/repository/maven-public/"
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    //https://search.maven.org/artifact/org.json/json
+    implementation 'org.json:json:20210307'
+//
+
+    implementation 'nl.rutgerkok:worldgeneratorapi:1.2.0'
+    implementation 'com.comphenix.protocol:ProtocolLib:4.7.0-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT'
+    implementation 'commons-io:commons-io:2.8.0'
+
+    implementation 'com.github.IceyLeagons:Icicle:ddea8c30b7'
+
+    //https://projectlombok.org/setup/gradle
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
