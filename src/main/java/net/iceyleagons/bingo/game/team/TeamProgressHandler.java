@@ -2,6 +2,7 @@ package net.iceyleagons.bingo.game.team;
 
 import lombok.Getter;
 import net.iceyleagons.bingo.game.enums.BoardMode;
+import net.iceyleagons.bingo.utils.XYCoordinate;
 
 import static net.iceyleagons.bingo.items.MapImage.GRID_SIZE;
 
@@ -14,8 +15,16 @@ public class TeamProgressHandler {
         booleanMatrix[x][y] = value;
     }
 
+    public void setChecked(XYCoordinate xyCoordinate, boolean value) {
+        setChecked(xyCoordinate.getX(), xyCoordinate.getY(), value);
+    }
+
     public boolean isChecked(int x, int y) {
         return booleanMatrix[x][y];
+    }
+
+    public boolean isChecked(XYCoordinate xyCoordinate) {
+        return isChecked(xyCoordinate.getX(), xyCoordinate.getY());
     }
 
     public boolean checkForWin(BoardMode boardMode) {

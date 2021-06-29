@@ -24,11 +24,13 @@ public class Team {
     private final int playersPerTeam;
     private final Location spawnPoint;
     private final TeamProgressHandler teamProgressHandler = new TeamProgressHandler();
+    private MapImage mapImage;
 
     private final Set<Player> members = new HashSet<>();
 
     public void onGameStarted(ItemDictionary chosenItems) {
-
+        mapImage = new MapImage(chosenItems, this);
+        members.forEach(m -> m.teleport(spawnPoint));
     }
 
     /**

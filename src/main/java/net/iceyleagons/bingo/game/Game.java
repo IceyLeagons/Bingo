@@ -1,19 +1,24 @@
 package net.iceyleagons.bingo.game;
 
+import com.sun.istack.internal.Nullable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.game.enums.BoardMode;
 import net.iceyleagons.bingo.game.enums.Difficulty;
 import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.team.Team;
 import net.iceyleagons.bingo.items.ItemDictionary;
+import net.iceyleagons.bingo.utils.GameUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -39,6 +44,9 @@ public class Game {
     @Setter
     private BoardMode boardMode = BoardMode.LINE;
 
+    @Nullable
+    private BukkitTask lobbyCountdown = null;
+
     public Game(GameManager gameManager, int maxPlayers, int playersPerTeam, int minimumPlayers) {
         this.gameManager = gameManager;
         this.maxPlayers = maxPlayers;
@@ -51,6 +59,36 @@ public class Game {
 
         this.gameListener = new GameListener(this);
         Bukkit.getServer().getPluginManager().registerEvents(this.gameListener, gameManager.getMain());
+    }
+
+    public void startCountdown() {
+        lobbyCountdown = new BukkitRunnable(){
+            int count = 40;
+            @Override
+            public void run() {
+                if (count == 40 || count == 20 || count == 10 || count <= 5) {
+                    broadcast(Main.PREFIX + "Game is starting in &e" + count + " seconds!");
+                    if (count <= 5) {
+                        broadcastTitle("&6" + GameUtils.getNumberIcon(count), "", 2, 16, 2);
+                    }
+                }
+                if (count <= 0) {
+                    interruptCountdown();
+                    startGame();
+                }
+
+                count -= 1;
+            }
+        }.runTaskTimer(gameManager.getMain(), 0L, 20L);
+    }
+
+    public void interruptCountdown() {
+        this.lobbyCountdown.cancel();
+    }
+
+    public void broadcastTitle(String title, String subtitle, int fadeIn, int stay, int fadeOut) {
+        players.keySet().forEach(p -> p.sendTitle(ChatColor.translateAlternateColorCodes('&', title),
+                ChatColor.translateAlternateColorCodes('&', subtitle), fadeIn, stay, fadeOut));
     }
 
     public void startGame() {
