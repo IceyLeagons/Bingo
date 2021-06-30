@@ -3,15 +3,23 @@ package net.iceyleagons.bingo.game.team;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import net.iceyleagons.bingo.Main;
 import net.iceyleagons.bingo.game.Game;
+import net.iceyleagons.bingo.items.BingoRenderer;
 import net.iceyleagons.bingo.items.ItemDictionary;
 import net.iceyleagons.bingo.items.MapImage;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.MapMeta;
+import org.bukkit.map.MapView;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Getter
@@ -24,13 +32,36 @@ public class Team {
     private final int playersPerTeam;
     private final Location spawnPoint;
     private final TeamProgressHandler teamProgressHandler = new TeamProgressHandler();
+
     private MapImage mapImage;
+    private BingoRenderer bingoRenderer;
+    private ItemStack mapItem;
 
     private final Set<Player> members = new HashSet<>();
 
     public void onGameStarted(ItemDictionary chosenItems) {
         mapImage = new MapImage(chosenItems, this);
-        members.forEach(m -> m.teleport(spawnPoint));
+        bingoRenderer = new BingoRenderer(mapImage);
+        setupMap();
+
+        members.forEach(m -> {
+            m.getInventory().setItemInOffHand(mapItem.clone());
+            m.setBedSpawnLocation(spawnPoint, true); //TODO save bed spawns before game
+            m.teleport(spawnPoint);
+        });
+    }
+
+    private void setupMap() {
+        mapItem = new ItemStack(Material.FILLED_MAP);
+
+        MapMeta mapMeta = (MapMeta) mapItem.getItemMeta();
+        MapView mapView = Bukkit.createMap(game.getWorld());
+
+        mapView.getRenderers().clear();
+        mapView.addRenderer(bingoRenderer);
+
+        Objects.requireNonNull(mapMeta).setMapView(mapView);
+        mapItem.setItemMeta(mapMeta);
     }
 
     /**
@@ -49,15 +80,37 @@ public class Team {
     }
 
     /**
+     * Broadcasts a message for this team.
+     *
+     * @param message the message from {@link AsyncPlayerChatEvent#getMessage()}
+     */
+    public void broadcast(String message) {
+        members.forEach(m -> m.sendMessage(Main.PREFIX + message));
+    }
+
+    /**
      * Joins the player to this team.
      * This will send out broadcasts and add the player to the {@link Game#getPlayers()} map as well.
      *
      * @param player the {@link Player}
      */
     public void joinPlayer(Player player) {
-        game.getPlayers().put(player, this);
         members.add(player);
 
         game.broadcast(String.format("&8[&a+&8] &e%s &9has joined the game.", player.getName()));
+        game.addPlayer(player, this);
+    }
+
+    /**
+     * Removes the player to this team.
+     * This will send out broadcasts and add the player to the {@link Game#getPlayers()} map as well.
+     *
+     * @param player the {@link Player}
+     */
+    public void removePlayer(Player player) {
+        members.remove(player);
+
+        game.broadcast(String.format("&8[&c-&8] &e%s &9has left the game.", player.getName()));
+        game.removePlayer(player);
     }
 }

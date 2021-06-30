@@ -83,6 +83,8 @@ public class Game {
     }
 
     public void interruptCountdown() {
+        if (lobbyCountdown == null) return;
+
         this.lobbyCountdown.cancel();
     }
 
@@ -95,6 +97,33 @@ public class Game {
         ItemDictionary itemDictionary = ItemDictionary.generateRandomItems(Difficulty.NORMAL); //TODO replace with voted difficulty
 
         players.values().forEach(t -> t.onGameStarted(itemDictionary));
+    }
+
+    public void endGame() {
+        gameManager.onGameEnd(this);
+    }
+
+    public void addPlayer(Player player, Team team) {
+        players.put(player, team);
+        handlePlayerSizeLogic();
+    }
+
+    public void removePlayer(Player player) {
+        players.remove(player);
+        handlePlayerSizeLogic();
+    }
+
+    private void handlePlayerSizeLogic() {
+        if (players.size() >= minimumPlayers) {
+            startCountdown();
+            return;
+        }
+
+        if (this.lobbyCountdown != null && !this.lobbyCountdown.isCancelled()) {
+            broadcast(Main.PREFIX + "Game does not meet the minimum amount of players. Stopping countdown...");
+        }
+
+        interruptCountdown();
     }
 
     /**

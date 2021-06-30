@@ -8,6 +8,7 @@ import net.iceyleagons.bingo.game.team.TeamProgressHandler;
 import net.iceyleagons.bingo.items.MapImage;
 import net.iceyleagons.bingo.utils.XYCoordinate;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.*;
@@ -32,10 +33,12 @@ public class GameListener implements Listener {
         }
 
         if (mapImage.getCoordinates().containsKey(event.getMaterial())) {
-            XYCoordinate xyCoordinate = mapImage.getCoordinates().get(event.getMaterial());
+            event.getTeam().broadcast(ChatColor.translateAlternateColorCodes('&', String.format("&e%s &9has found &e%s", event.getPlayer().getName(), event.getMaterial().getKey().getKey())));
 
+            XYCoordinate xyCoordinate = mapImage.getCoordinates().get(event.getMaterial());
             if (!teamProgressHandler.isChecked(xyCoordinate)) teamProgressHandler.setChecked(xyCoordinate, true);
 
+            event.getTeam().getBingoRenderer().update();
             teamProgressHandler.checkForWin(game.getBoardMode());
         }
     }
