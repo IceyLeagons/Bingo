@@ -1,0 +1,12 @@
+name: Bingo
+version: 1.0
+api-version: 1.13
+main: net.iceyleagons.bingo.Main
+description: Bingo
+depend:
+  - Icicle
+  - ProtocolLib
+  - WorldGeneratorApi
+authors:
+  - TOTHTOMI
+  - G4be_

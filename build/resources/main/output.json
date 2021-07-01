@@ -1,0 +1,2861 @@
+{
+  "materials": [
+    {
+      "difficulty": "EASY",
+      "name": "acacia_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "acacia_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "activator_rail"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "allium"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ancient_debris"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "andesite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "anvil"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "anvil"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "apple"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "armor_stand"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "arrow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "azure_bluet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "baked_potato"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bamboo"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "barrel_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "barrel_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "barrel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "barrel_open"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "basalt_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "basalt"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beacon"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beef"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beehive_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beetroot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beetroot_seeds"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "beetroot_soup"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bee_nest_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bell"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "birch_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blackstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blackstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "black_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blast_furnace_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blaze_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blaze_rod"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_ice"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_orchid"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "blue_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bone_block_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bone_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bone_meal"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "book"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bookshelf"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bowl"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bread"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brewing_stand"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brewing_stand_base"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brick"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "broken_elytra"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_mushroom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_mushroom_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "brown_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cactus_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cactus_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cactus"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cake"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "campfire"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "carrot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "carrot_on_a_stick"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cartography_table"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "carved_pumpkin"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cauldron"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chain"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "charcoal"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chest_minecart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chicken"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chipped_anvil"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_nether_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_polished_blackstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_quartz_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_quartz_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_red_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chiseled_stone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "chorus_fruit"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "clay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "clay_ball"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "clock_00"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "coal"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "coal_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "coal_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "coarse_dirt"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cobblestone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cobweb"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cocoa_beans"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cod"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cod_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "comparator"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "compass_00"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "composter_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "composter_compost"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "composter_ready"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "composter_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "composter"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "conduit"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_beef"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_chicken"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_cod"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_mutton"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_porkchop"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_rabbit"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cooked_salmon"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cookie"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cornflower"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cracked_nether_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cracked_polished_blackstone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cracked_stone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crafting_table_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "creeper_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_fungus"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_nylium"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_nylium_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_roots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_roots_pot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crimson_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_arrow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_firework"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_pulling_0"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_pulling_1"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_pulling_2"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crossbow_standby"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "crying_obsidian"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cut_red_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cut_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "cyan_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "damaged_anvil"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dandelion"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_oak_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dark_prismarine"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "daylight_detector"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dead_bush"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "detector_rail"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_boots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_chestplate"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_horse_armor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_leggings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diamond_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "diorite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dirt"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dispenser_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dispenser_front_vertical"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dragon_breath"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dragon_egg"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dried_kelp"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dried_kelp"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dropper_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "dropper_front_vertical"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "egg"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "elytra"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "emerald"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "emerald_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "emerald_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "enchanted_book"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "enchanting_table_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "enchanting_table"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ender_eye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ender_pearl"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "end_crystal"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "end_portal_frame_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "end_rod"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "end_stone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "end_stone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "experience_bottle"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "feather"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fermented_spider_eye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "filled_map"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "filled_map_markings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "firework_rocket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "firework_star"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fire_charge"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fishing_rod"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fishing_rod_cast"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "fletching_table_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "flint"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "flint_and_steel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "flower_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "flower_pot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "frosted_ice_0"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "furnace_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "furnace_minecart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ghast_tear"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gilded_blackstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glass_bottle"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glistering_melon_slice"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "globe_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glowstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "glowstone_dust"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_apple"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_boots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_carrot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_chestplate"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_horse_armor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_leggings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "golden_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gold_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gold_ingot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gold_nugget"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gold_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "granite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "grass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "grass_block_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "grass_block_snow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "grass_path_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gravel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gray_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "green_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "gunpowder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hay_block_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hay_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "heart_of_the_sea"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "honeycomb"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "honeycomb_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "honey_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "honey_bottle"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hopper"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hopper_inside"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hopper_minecart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hopper_outside"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "hopper"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ice"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ink_sac"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_bars"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_boots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_chestplate"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_horse_armor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_ingot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_leggings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_nugget"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "iron_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "item_frame"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jack_o_lantern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jigsaw_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jigsaw_lock"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jigsaw_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jigsaw"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jukebox_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jukebox"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "jungle_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "kelp"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "knowledge_book"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "ladder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lantern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lapis_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lapis_lazuli"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lapis_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "large_fern_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "large_fern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lava_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lead"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_boots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_boots_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_chestplate"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_chestplate_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_helmet_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_horse_armor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_leggings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "leather_leggings_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lever"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_blue_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "light_gray_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lilac_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lilac"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lily_of_the_valley"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lily_pad"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lime_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lingering_potion"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lodestone_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "lodestone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "loom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magenta_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magma"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "magma_cream"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "map"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "melon_seeds"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "melon_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "melon_slice"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "melon"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "milk_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "minecart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mojang_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mossy_cobblestone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mossy_stone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mushroom_block_inside"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mushroom_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mushroom_stew"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mutton"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mycelium_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "mycelium"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "name_tag"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nautilus_shell"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_boots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_chestplate"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_ingot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_leggings"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_scrap"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherite_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "netherrack"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_brick"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_gold_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_quartz_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_sprouts"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_star"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_wart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "nether_wart_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "note_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oak_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "observer_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "obsidian"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_tulip"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "orange_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "oxeye_daisy"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "packed_ice"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "painting"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "paper"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "peony_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "peony"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "phantom_membrane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "piglin_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_tulip"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pink_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "piston_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "podzol_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "podzol"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "poisonous_potato"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_andesite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_basalt_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_basalt"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_blackstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_blackstone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_diorite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "polished_granite"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "poppy"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "porkchop"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "potato"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "potion"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "potion_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "powered_rail"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "prismarine"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "prismarine_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "prismarine_crystals"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "prismarine_shard"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pufferfish"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pufferfish_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pumpkin_pie"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pumpkin_seeds"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pumpkin_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "pumpkin"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purple_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purpur_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purpur_pillar"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "purpur_pillar"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_block_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_block_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_pillar"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "quartz_pillar"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rabbit"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rabbit_foot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rabbit_hide"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rabbit_stew"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rail"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "redstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "redstone_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "redstone_lamp"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "redstone_ore"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "redstone_torch"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_mushroom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_mushroom_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_nether_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_sand"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_sandstone_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_tulip"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "red_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "repeater"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "repeater_on"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "respawn_anchor_side4"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rose_bush_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rose_bush"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "rotten_flesh"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "saddle"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "salmon"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "salmon_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sand"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sandstone_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sandstone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "scaffolding"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "scute"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "seagrass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sea_lantern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sea_pickle"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "shears"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "shroomlight"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "shulker_shell"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "skull_banner_pattern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "slime_ball"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "slime_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smithing_table_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smoker_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smoker_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smoker_front_on"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smoker_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smoker"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smooth_stone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "smooth_stone_slab_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "snow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "snowball"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "soul_campfire"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "soul_lantern"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "soul_sand"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "soul_soil"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "soul_torch"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spawner"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spawn_egg"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spawn_egg_overlay"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spectral_arrow"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spider_eye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "splash_potion"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sponge"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_boat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_leaves"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_sapling"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "spruce_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stick"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stonecutter_bottom"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stonecutter_saw"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stonecutter_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stonecutter"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_bricks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stone_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "string"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_acacia_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_birch_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_crimson_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_crimson_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_dark_oak_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_jungle_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_oak_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_spruce_log"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_warped_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "stripped_warped_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sugar"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sugar_cane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sunflower_front"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "suspicious_stew"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "sweet_berries"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "target_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tipped_arrow_base"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tipped_arrow_head"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tnt_minecart"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tnt_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "torch"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "totem_of_undying"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "trident"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tripwire"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tripwire_hook"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tropical_fish"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "tropical_fish_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "turtle_egg"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "turtle_egg_slightly_cracked"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "turtle_egg_very_cracked"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "turtle_helmet"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "twisting_vines"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "twisting_vines_plant"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "vine"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_door"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_fungus"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_fungus_on_a_stick"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_nylium"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_nylium_side"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_planks"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_roots"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_roots_pot"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_sign"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_stem"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_trapdoor"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "warped_wart_block"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "water_bucket"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "weeping_vines"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "weeping_vines_plant"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wet_sponge"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wheat"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wheat_seeds"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_tulip"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "white_wool"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wither_rose"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wooden_axe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wooden_hoe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wooden_pickaxe"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wooden_shovel"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "wooden_sword"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "writable_book"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "written_book"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_concrete"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_concrete_powder"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_dye"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_glazed_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_shulker_box"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_stained_glass"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_stained_glass_pane"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_terracotta"
+    },
+    {
+      "difficulty": "EASY",
+      "name": "yellow_wool"
+    }
+  ],
+  "atlas_file": "atlas.png"
+}

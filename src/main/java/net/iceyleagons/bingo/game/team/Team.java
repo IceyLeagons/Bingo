@@ -44,11 +44,12 @@ public class Team {
         bingoRenderer = new BingoRenderer(mapImage);
         setupMap();
 
-        members.forEach(m -> {
-            m.getInventory().setItemInOffHand(mapItem.clone());
-            m.setBedSpawnLocation(spawnPoint, true); //TODO save bed spawns before game
-            m.teleport(spawnPoint);
-        });
+        members.forEach(m -> m.getInventory().setItemInOffHand(mapItem.clone()));
+        bingoRenderer.update();
+    }
+
+    public boolean isFull() {
+        return members.size() == playersPerTeam;
     }
 
     private void setupMap() {
@@ -96,6 +97,9 @@ public class Team {
      */
     public void joinPlayer(Player player) {
         members.add(player);
+
+        player.setBedSpawnLocation(spawnPoint, true);
+        player.teleport(spawnPoint);
 
         game.broadcast(String.format("&8[&a+&8] &e%s &9has joined the game.", player.getName()));
         game.addPlayer(player, this);

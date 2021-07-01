@@ -3,19 +3,24 @@ package net.iceyleagons.bingo.game;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.team.Team;
 import net.iceyleagons.bingo.game.team.TeamProgressHandler;
 import net.iceyleagons.bingo.items.MapImage;
+import net.iceyleagons.bingo.utils.GameUtils;
 import net.iceyleagons.bingo.utils.XYCoordinate;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.*;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 @AllArgsConstructor
 public class GameListener implements Listener {
@@ -23,9 +28,32 @@ public class GameListener implements Listener {
     private final Game game;
 
     @EventHandler
+    public void onMove(PlayerMoveEvent event) {
+        if (!game.getPlayers().containsKey(event.getPlayer())) return;
+
+        if (event.getTo() == null) return;
+        if (game.getGameState() != GameState.IN_GAME)
+            if (game.getPlayers().get(event.getPlayer()).getSpawnPoint().toVector().setY(0).distance(event.getTo().toVector().setX(0)) > 3)
+                event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onBlockBreak(BlockBreakEvent event) {
+        if (GameUtils.nonBreakables.contains(event.getBlock()))
+            event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onLeave(PlayerQuitEvent event) {
+        if (!game.getPlayers().containsKey(event.getPlayer())) return;
+
+        game.getGameManager().leave(event.getPlayer());
+    }
+
+    @EventHandler
     public void onBingoItemEvent(BingoItemEvent event) {
         MapImage mapImage = event.getTeam().getMapImage();
-        TeamProgressHandler teamProgressHandler = event.getTeam().getTeamProgressHandler();;
+        TeamProgressHandler teamProgressHandler = event.getTeam().getTeamProgressHandler();
 
         if (mapImage == null || teamProgressHandler == null) {
             System.out.println("MapImage or TeamProgressHandler return null.");
@@ -58,7 +86,8 @@ public class GameListener implements Listener {
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
     public void onChat(EntityPickupItemEvent event) {
-        if (!(event.getEntity() instanceof Player)) return;;
+        if (!(event.getEntity() instanceof Player)) return;
+        ;
 
         Material material = event.getItem().getItemStack().getType();
         Player player = (Player) event.getEntity();
@@ -88,19 +117,4 @@ public class GameListener implements Listener {
         Bukkit.getServer().getPluginManager().callEvent(new BingoItemEvent(player, team, material));
     }
 
-    @Getter
-    @RequiredArgsConstructor
-    static class BingoItemEvent extends Event {
-        private final HandlerList handlerList = new HandlerList();
-
-        private final Player player;
-        private final Team team;
-        private final Material material;
-
-
-        @Override
-        public HandlerList getHandlers() {
-            return this.handlerList;
-        }
-    }
 }

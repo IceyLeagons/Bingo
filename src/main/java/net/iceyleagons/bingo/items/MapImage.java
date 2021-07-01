@@ -37,6 +37,7 @@ public class MapImage {
         this.minecraftFont = Resources.getMinecraftFont();
         this.checkMark = Resources.getCheckmarkIcon();
         populateImageMatrix(itemDictionary, imageMatrix, coordinates);
+        //team.getBingoRenderer().update();
     }
 
     public BufferedImage renderCombined() {
@@ -105,16 +106,18 @@ public class MapImage {
 
     private static void populateImageMatrix(ItemDictionary itemDictionary, BufferedImage[][] imageMatrix, Map<Material, XYCoordinate> coordinates) {
         ItemStack[] itemStacks = itemDictionary.getItems();
+        System.out.println("POPULATING!!!!");
 
         for (int i = 0; i < imageMatrix.length; i++) {
             for (int j = 0; j < imageMatrix[i].length; j++) {
                 Material material = itemStacks[i + j].getType();
 
-                if (Texture.textures.containsKey(material)) {
+                if (!Texture.textures.containsKey(material)) {
                     throw new IllegalStateException("Texture map does not contain Material (Mat. from ItemDictionary)");
                 }
 
                 imageMatrix[i][j] = Texture.textures.get(material).getImage();
+                System.out.println(imageMatrix[i][j]);
                 coordinates.put(material, new XYCoordinate(i, j));
             }
         }

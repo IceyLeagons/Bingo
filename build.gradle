@@ -2,8 +2,15 @@ plugins {
     id 'java'
 }
 
+configurations {
+    extraLibs
+}
+
 group 'net.iceyleagons'
 version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     maven {url = "https://jitpack.io"}
@@ -18,15 +25,19 @@ repositories {
     mavenLocal()
 }
 
+compileJava {
+    options.encoding = "UTF-8"
+}
+
 dependencies {
     //https://search.maven.org/artifact/org.json/json
     implementation 'org.json:json:20210307'
 //
 
-    implementation 'nl.rutgerkok:worldgeneratorapi:1.2.0'
+    implementation 'nl.rutgerkok:worldgeneratorapi:1.1.4'
     implementation 'com.comphenix.protocol:ProtocolLib:4.7.0-SNAPSHOT'
     implementation 'org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT'
-    implementation 'commons-io:commons-io:2.8.0'
+    extraLibs 'commons-io:commons-io:2.8.0'
 
     implementation 'com.github.IceyLeagons:Icicle:ddea8c30b7'
 
@@ -36,6 +47,14 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    configurations.implementation.extendsFrom(configurations.extraLibs)
+}
+
+jar {
+    from {
+        configurations.extraLibs.collect {it.isDirectory() ? it : zipTree(it)}
+    }
 }
 
 test {

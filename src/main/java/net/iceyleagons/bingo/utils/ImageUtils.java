@@ -38,7 +38,7 @@ public class ImageUtils {
     }
 
     public static void drawImages(Graphics2D graphics2D, int gridSize, int x, int y, int grid, BufferedImage[][] matrix) {
-        if (matrix.length != gridSize) return;
+        //if (matrix.length != gridSize) return;
         int gX = 0;
         int gY = 0;
 

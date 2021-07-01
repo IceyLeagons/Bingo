@@ -1,6 +1,5 @@
 package net.iceyleagons.bingo.game;
 
-import com.sun.istack.internal.Nullable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,10 +10,8 @@ import net.iceyleagons.bingo.game.enums.GameState;
 import net.iceyleagons.bingo.game.team.Team;
 import net.iceyleagons.bingo.items.ItemDictionary;
 import net.iceyleagons.bingo.utils.GameUtils;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.World;
+import org.apache.commons.lang.RandomStringUtils;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -33,6 +30,7 @@ public class Game {
     private final int minimumPlayers;
     private final int mapSize = 512;
     private final World world;
+    private final String id;
 
     private final Set<Team> teams;
     private final Map<Player, Team> players = new HashMap<>();
@@ -44,7 +42,6 @@ public class Game {
     @Setter
     private BoardMode boardMode = BoardMode.LINE;
 
-    @Nullable
     private BukkitTask lobbyCountdown = null;
 
     public Game(GameManager gameManager, int maxPlayers, int playersPerTeam, int minimumPlayers) {
@@ -52,18 +49,19 @@ public class Game {
         this.maxPlayers = maxPlayers;
         this.playersPerTeam = playersPerTeam;
         this.minimumPlayers = minimumPlayers;
-        this.world = gameManager.getAndGenerateWorld(this);
-
-        int amountOfTeams = maxPlayers/playersPerTeam;
-        this.teams = createTeams(amountOfTeams, playersPerTeam);
-
+        this.id = RandomStringUtils.randomAlphanumeric(5);
         this.gameListener = new GameListener(this);
-        Bukkit.getServer().getPluginManager().registerEvents(this.gameListener, gameManager.getMain());
+        Bukkit.getServer().getPluginManager().registerEvents(this.gameListener, Main.instance);
+
+        this.world = gameManager.getAndGenerateWorld(this);
+        int amountOfTeams = maxPlayers / playersPerTeam;
+        this.teams = createTeams(amountOfTeams, playersPerTeam);
     }
 
     public void startCountdown() {
-        lobbyCountdown = new BukkitRunnable(){
-            int count = 40;
+        lobbyCountdown = new BukkitRunnable() {
+            int count = 15;
+
             @Override
             public void run() {
                 if (count == 40 || count == 20 || count == 10 || count <= 5) {
@@ -79,7 +77,7 @@ public class Game {
 
                 count -= 1;
             }
-        }.runTaskTimer(gameManager.getMain(), 0L, 20L);
+        }.runTaskTimer(Main.instance, 0L, 20L);
     }
 
     public void interruptCountdown() {
@@ -97,6 +95,7 @@ public class Game {
         ItemDictionary itemDictionary = ItemDictionary.generateRandomItems(Difficulty.NORMAL); //TODO replace with voted difficulty
 
         players.values().forEach(t -> t.onGameStarted(itemDictionary));
+        setGameState(GameState.IN_GAME);
     }
 
     public void endGame() {
@@ -126,6 +125,10 @@ public class Game {
         interruptCountdown();
     }
 
+    public boolean isFull() {
+        return getMaxPlayers() == getPlayers().size();
+    }
+
     /**
      * Broadcasts a message for everyone without any prefix.
      * Should be used for internal notifications.
@@ -140,7 +143,7 @@ public class Game {
      * Broadcasts a message for everyone as "global".
      *
      * @param message the message from {@link AsyncPlayerChatEvent#getMessage()}
-     * @param player the player who sent the message
+     * @param player  the player who sent the message
      */
     public void broadcastMessage(String message, Player player) {
         players.keySet().forEach(p -> {
@@ -155,7 +158,7 @@ public class Game {
      * Creates the teams for the game.
      * Must be called after world has ben set!
      *
-     * @param amount the amount of teams to create
+     * @param amount         the amount of teams to create
      * @param playersPerTeam the maximum amount of players allowed in a team
      * @return the Set of tems.
      */
@@ -166,6 +169,7 @@ public class Game {
 
         for (int i = 0; i < amount; i++) {
             Location spawn = world.getHighestBlockAt(random.nextInt(mapSize - 50), random.nextInt(mapSize - 50)).getLocation().clone().add(0, 1, 0);
+            GameUtils.spawnPlatform(DyeColor.GREEN, spawn);
             teams.add(new Team(this, i + 1, playersPerTeam, spawn));
         }
 

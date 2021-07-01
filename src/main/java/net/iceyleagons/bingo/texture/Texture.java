@@ -10,44 +10,56 @@ import org.bukkit.Material;
 import org.json.JSONObject;
 
 import java.awt.image.BufferedImage;
+import java.awt.image.RasterFormatException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
 
-@Getter
 @Service
-@RequiredArgsConstructor
 public class Texture {
 
-    public static final Map<Material, Texture> textures = new HashMap<>(1100);
+    public static final Map<Material, GECISCLASS> textures = new HashMap<>(1100);
+    public static boolean init = false; //here because of an Icicle issue, so we do not create it twice unnecessarily
     private static int id = 0;
 
-    private @NonNull BufferedImage image;
-    private @NonNull int difficultyWeight;
-    private @NonNull int x, y;
-    private @NonNull Material baseMaterial;
-
-    @Autowired
+    //TODO Icicle todo: because of enhancer this class is created twice!
+    //Edit: removed issue from icicle temporarily by removing bytecode editing
     @SneakyThrows
-    public Texture(Main main) {
+    public Texture() {
+        if (init) return;
+
+        init = true;
+        System.out.println("clearing");
         textures.clear();
         val atlas = Resources.getItemAtlas();
-        val atlasJson = main.getResource("output.json");
+        val atlasJson = Main.instance.getResource("output.json");
 
         // fuck of intellij
         val atlasReader = new InputStreamReader(atlasJson);
         val json = new JSONObject(IOUtils.toString(atlasReader));
 
-        json.keys().forEachRemaining(key -> {
+        System.out.println("Atlas W: " + atlas.getWidth() + " H: " + atlas.getHeight());
+
+        for (Object materials : json.getJSONArray("materials")) {
+            JSONObject material = (JSONObject) materials;
+
+            //comment to Gábe: megoldom (local), addig azt csinálsz amit akarsz
+            //if (id > 5) break; //to test more easily
+
+
             id++;
             int x = id % 16 * 16;
-            int y = ((int) (id / 16f)) * 16;
+            int y = ((int) Math.floor(id / 16f)) * 16;
             try {
-                Material mat = Material.valueOf(key.toUpperCase());
+                //System.out.println("================");
+                Material mat = Material.valueOf(material.getString("name").toUpperCase());
+
+                //System.out.println("found " + material.getString("name").toUpperCase());
+               // System.out.println("X: " + x + " Y:" + y);
 
                 int diffWeight = 1;
-                switch (json.getJSONObject(key).getString("difficulty").toLowerCase()) {
+                switch (material.getString("difficulty").toLowerCase()) {
                     default:
                     case "free":
                         break;
@@ -65,11 +77,25 @@ public class Texture {
                         break;
                 }
 
-                textures.put(mat, new Texture(atlas.getSubimage(x, y, 16, 16), diffWeight, x, y, mat));
-            } catch (IllegalArgumentException ignored) {
+                //System.out.println("putting gecisclass " + material.getString("name").toUpperCase());
+                textures.put(mat, new GECISCLASS(atlas.getSubimage(x, y, 16, 16), diffWeight, x, y, mat));
+            } catch (IllegalArgumentException | RasterFormatException ignored) {
+                System.out.println("not found or raster outside " + material.getString("name").toUpperCase());
                 // skip.
             }
-        });
+            //System.out.println("=======================");
+        }
+    }
+
+    @Getter
+    @RequiredArgsConstructor
+    public static class GECISCLASS {
+        private @NonNull BufferedImage image;
+        private @NonNull int difficultyWeight;
+        private @NonNull int x, y;
+        private @NonNull Material baseMaterial;
+
+
     }
 
 }
